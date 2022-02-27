@@ -1,0 +1,8 @@
+{
+    "parent": "minecraft:block/cube",
+    "textures": {
+        "top": "polaris:block/obsidian_nether_furnace_top",
+        "front": "polaris:block/obsidian_nether_furnace_on",
+        "side": "polaris:block/obsidian_nether_furnace_side"
+    }
+}

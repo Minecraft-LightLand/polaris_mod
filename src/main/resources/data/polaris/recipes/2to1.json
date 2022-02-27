@@ -1,0 +1,16 @@
+{
+    "group": "polaris_disassembly",
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "0"
+    ],
+    "key": {
+        "0": {
+            "item": "polaris:star_coin_2"
+        }
+    },
+    "result": {
+        "item": "polaris:star_coin_1",
+        "count": 9
+    }
+}

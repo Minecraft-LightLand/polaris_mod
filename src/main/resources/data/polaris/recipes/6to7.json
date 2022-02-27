@@ -1,0 +1,36 @@
+{
+    "group": "polaris",
+    "type": "minecraft:crafting_shapeless",
+    "ingredients": [{
+            "item": "polaris:star_coin_6"
+        },
+        {
+            "item": "polaris:star_coin_6"
+        },
+        {
+            "item": "polaris:star_coin_6"
+        },
+        {
+            "item": "polaris:star_coin_6"
+        },
+        {
+            "item": "polaris:star_coin_6"
+        },
+        {
+            "item": "polaris:star_coin_6"
+        },
+        {
+            "item": "polaris:star_coin_6"
+        },
+        {
+            "item": "polaris:star_coin_6"
+        },
+        {
+            "item": "polaris:star_coin_6"
+        }
+    ],
+    "result": {
+        "item": "polaris:star_coin_7",
+        "count": 1
+    }
+}

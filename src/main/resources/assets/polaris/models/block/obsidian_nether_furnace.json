@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "particle": "polaris:block/obsidian_nether_furnace_front",
+    "north": "polaris:block/obsidian_nether_furnace_front",
+    "south": "polaris:block/obsidian_nether_furnace_side",
+    "east": "polaris:block/obsidian_nether_furnace_side",
+    "west": "polaris:block/obsidian_nether_furnace_side",
+    "up": "polaris:block/obsidian_nether_furnace_top",
+    "down": "polaris:block/obsidian_nether_furnace_bottom"
+  }
+}

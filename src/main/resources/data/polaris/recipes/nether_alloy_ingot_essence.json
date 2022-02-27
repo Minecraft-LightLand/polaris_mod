@@ -1,0 +1,20 @@
+{
+  "group": "polaris",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " A ",
+    "ABA",
+    " A "
+  ],
+  "key": {
+    "A": {
+      "item": "polaris:end_essence"
+    },
+    "B": {
+      "item": "minecraft:iron_ingot"
+    }
+  },
+  "result": {
+    "item": "polaris:obsidian_nether_furnace"
+  }
+}
