@@ -1,4 +1,4 @@
-package org.xkmc.polaris.init;
+package org.xkmc.polaris.init.registry;
 
 import com.tterrag.registrate.util.entry.ItemEntry;
 import net.minecraft.inventory.EquipmentSlotType;
@@ -6,6 +6,7 @@ import net.minecraft.item.Item;
 import org.xkmc.polaris.content.item.PolarisArmorMaterial;
 import org.xkmc.polaris.content.item.PolarisArmors;
 import org.xkmc.polaris.content.item.PolarisItemGroup;
+import org.xkmc.polaris.init.Polaris;
 
 @SuppressWarnings({"rawtype", "unchecked", "unused"})
 public class PolarisItems {

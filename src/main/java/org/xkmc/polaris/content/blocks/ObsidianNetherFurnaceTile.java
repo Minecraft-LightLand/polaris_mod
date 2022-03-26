@@ -15,9 +15,9 @@ import net.minecraftforge.items.CapabilityItemHandler;
 import net.minecraftforge.items.IItemHandler;
 import net.minecraftforge.items.ItemStackHandler;
 import org.xkmc.polaris.content.recipes.ObsidianFurnaceRecipe;
-import org.xkmc.polaris.init.PolarisItems;
-import org.xkmc.polaris.init.PolarisRecipeTypes;
-import org.xkmc.polaris.init.PolarisTileEntities;
+import org.xkmc.polaris.init.registry.PolarisBlocks;
+import org.xkmc.polaris.init.registry.PolarisItems;
+import org.xkmc.polaris.init.registry.PolarisRecipeTypes;
 
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
@@ -31,10 +31,6 @@ public class ObsidianNetherFurnaceTile extends TileEntity implements ITickableTi
 
 	public ObsidianNetherFurnaceTile(TileEntityType<?> tileEntityTypeIn) {
 		super(tileEntityTypeIn);
-	}
-
-	public ObsidianNetherFurnaceTile() {
-		this(PolarisTileEntities.OBSIDIAN_NETHER_FURNACE_TILE.get());
 	}
 
 	@Override
@@ -88,7 +84,7 @@ public class ObsidianNetherFurnaceTile extends TileEntity implements ITickableTi
 	@Override
 	@Nonnull
 	public TileEntityType<?> getType() {
-		return PolarisTileEntities.OBSIDIAN_NETHER_FURNACE_TILE.get();
+		return PolarisBlocks.OBSIDIAN_NETHER_FURNACE_TILE.get();
 	}
 
 	@Nonnull
@@ -107,7 +103,7 @@ public class ObsidianNetherFurnaceTile extends TileEntity implements ITickableTi
 		}
 
 		Optional<ObsidianFurnaceRecipe> recipe = this.level.getRecipeManager()
-				.getRecipeFor(PolarisRecipeTypes.OBSIDIAN_FURNACE_RECIPE_TYPE, inv, this.level);
+				.getRecipeFor(PolarisRecipeTypes.RT_OBSIDIAN_FURNACE, inv, this.level);
 
 		recipe.ifPresent(iRecipe -> {
 			ItemStack output = iRecipe.getResultItem();

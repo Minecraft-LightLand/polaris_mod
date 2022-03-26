@@ -1,4 +1,4 @@
-package org.xkmc.polaris.content.data;
+package org.xkmc.polaris.init.data;
 
 import net.minecraft.block.Block;
 import net.minecraft.item.Item;

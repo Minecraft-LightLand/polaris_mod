@@ -13,6 +13,7 @@ import net.minecraft.util.JSONUtils;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.registry.Registry;
 import net.minecraftforge.registries.ForgeRegistryEntry;
+import org.xkmc.polaris.init.registry.PolarisRecipeTypes;
 
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
@@ -61,7 +62,7 @@ public class Serializer<T extends ObsidianFurnaceRecipe> extends ForgeRegistryEn
 		}
 		float f = JSONUtils.getAsFloat(json, "experience", 0.0F);
 		int i = JSONUtils.getAsInt(json, "cookingtime", this.defaultCookingTime);
-		return this.factory.create(new T.ObsidianFurnaceRecipeType(), resourceLocation, s, ingredient, itemstack, f, i);
+		return this.factory.create(PolarisRecipeTypes.RT_OBSIDIAN_FURNACE, resourceLocation, s, ingredient, itemstack, f, i);
 	}
 
 	@Override
@@ -73,7 +74,7 @@ public class Serializer<T extends ObsidianFurnaceRecipe> extends ForgeRegistryEn
 		ItemStack itemstack = json.readItem();
 		float f = json.readFloat();
 		int i = json.readVarInt();
-		return this.factory.create(new T.ObsidianFurnaceRecipeType(), resourceLocation, s, ingredient, itemstack, f, i);
+		return this.factory.create(PolarisRecipeTypes.RT_OBSIDIAN_FURNACE, resourceLocation, s, ingredient, itemstack, f, i);
 	}
 
 	@Override

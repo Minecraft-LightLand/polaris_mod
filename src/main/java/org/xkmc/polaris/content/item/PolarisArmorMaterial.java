@@ -7,7 +7,7 @@ import net.minecraft.util.LazyValue;
 import net.minecraft.util.SoundEvent;
 import net.minecraft.util.SoundEvents;
 import org.xkmc.polaris.init.Polaris;
-import org.xkmc.polaris.init.PolarisItems;
+import org.xkmc.polaris.init.registry.PolarisItems;
 
 import java.util.function.Supplier;
 

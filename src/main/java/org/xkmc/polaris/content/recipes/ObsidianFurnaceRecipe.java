@@ -7,7 +7,7 @@ import net.minecraft.util.NonNullList;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.world.World;
 import org.xkmc.polaris.init.Polaris;
-import org.xkmc.polaris.init.PolarisRecipeTypes;
+import org.xkmc.polaris.init.registry.PolarisRecipeTypes;
 
 import javax.annotation.Nonnull;
 import javax.annotation.ParametersAreNonnullByDefault;
@@ -46,7 +46,7 @@ public class ObsidianFurnaceRecipe extends AbstractCookingRecipe implements IRec
 	@Override
 	@Nonnull
 	public IRecipeSerializer<?> getSerializer() {
-		return PolarisRecipeTypes.OBSIDIAN_FURNACE_SERIALIZER.get();
+		return PolarisRecipeTypes.RS_OBSIDIAN_FURNACE.get();
 	}
 
 	@Override
@@ -105,10 +105,4 @@ public class ObsidianFurnaceRecipe extends AbstractCookingRecipe implements IRec
 		return this.result;
 	}
 
-	public static class ObsidianFurnaceRecipeType implements IRecipeType<ObsidianFurnaceRecipe> {
-		@Override
-		public String toString() {
-			return new ResourceLocation(Polaris.MODID, "obsidian_furnace").toString();
-		}
-	}
 }

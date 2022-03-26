@@ -1,5 +1,6 @@
 package dev.lcy0x1.base.block.impl;
 
+import com.tterrag.registrate.util.entry.TileEntityEntry;
 import dev.lcy0x1.base.block.mult.OnClickBlockMethod;
 import dev.lcy0x1.base.block.one.TitleEntityBlockMethod;
 import net.minecraft.block.BlockState;
@@ -17,15 +18,15 @@ import java.util.function.Supplier;
 
 public class TitleEntityBlockMethodImpl implements TitleEntityBlockMethod, OnClickBlockMethod {
 
-	private final Supplier<? extends TileEntity> f;
+	private final Supplier<TileEntityEntry<?>> f;
 
-	public TitleEntityBlockMethodImpl(Supplier<? extends TileEntity> f) {
+	public TitleEntityBlockMethodImpl(Supplier<TileEntityEntry<?>> f) {
 		this.f = f;
 	}
 
 	@Override
 	public TileEntity createTileEntity(BlockState state, IBlockReader world) {
-		return f.get();
+		return f.get().create();
 	}
 
 	@Override

@@ -1,6 +1,5 @@
 package dev.lcy0x1.base.block;
 
-import dev.lcy0x1.base.block.impl.TitleEntityBlockMethodImpl;
 import dev.lcy0x1.base.block.mult.*;
 import dev.lcy0x1.base.block.one.BlockPowerBlockMethod;
 import dev.lcy0x1.base.block.one.LightBlockMethod;
@@ -9,7 +8,6 @@ import dev.lcy0x1.base.block.one.TitleEntityBlockMethod;
 import dev.lcy0x1.base.block.type.BlockMethod;
 import dev.lcy0x1.base.block.type.MultipleBlockMethod;
 import dev.lcy0x1.base.block.type.SingletonBlockMethod;
-import dev.lcy0x1.base.block.type.TileEntitySupplier;
 import mcp.MethodsReturnNonnullByDefault;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
@@ -172,18 +170,15 @@ public class LightLandBlockImpl extends LightLandBlock {
 
 		public BlockImplementor addImpls(BlockMethod... impls) {
 			for (BlockMethod impl : impls) {
-				BlockMethod i = impl;
-				if (i instanceof TileEntitySupplier)
-					i = new TitleEntityBlockMethodImpl((TileEntitySupplier) impl);
-				if (i instanceof MultipleBlockMethod)
-					list.add((MultipleBlockMethod) i);
-				if (i instanceof SingletonBlockMethod) {
-					SingletonBlockMethod one = (SingletonBlockMethod) i;
+				if (impl instanceof MultipleBlockMethod)
+					list.add((MultipleBlockMethod) impl);
+				if (impl instanceof SingletonBlockMethod) {
+					SingletonBlockMethod one = (SingletonBlockMethod) impl;
 					List<Class<?>> list = new ArrayList<>();
 					addOneImpl(one.getClass(), list);
 					for (Class<?> cls : list) {
 						if (map.containsKey(cls)) {
-							throw new RuntimeException("class " + cls + " is implemented twice with " + map.get(cls) + " and " + i);
+							throw new RuntimeException("class " + cls + " is implemented twice with " + map.get(cls) + " and " + impl);
 						} else {
 							map.put(cls, one);
 						}
