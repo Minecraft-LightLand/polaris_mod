@@ -4,6 +4,7 @@ import net.minecraft.item.IItemTier;
 import net.minecraft.item.crafting.Ingredient;
 import net.minecraft.util.LazyValue;
 
+import javax.annotation.Nonnull;
 import java.util.function.Supplier;
 
 public enum PolarisItemTier implements IItemTier {
@@ -44,7 +45,7 @@ public enum PolarisItemTier implements IItemTier {
     public int getEnchantmentValue() {
         return this.enchantmentValue;
     }
-
+    @Nonnull
     public Ingredient getRepairIngredient() {
         return this.repairIngredient.get();
     }

@@ -1,9 +1,11 @@
 package org.xkmc.polaris.tileentity;
 
 import net.minecraft.block.BlockState;
+import net.minecraft.inventory.Inventory;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
 import net.minecraft.nbt.CompoundNBT;
+import net.minecraft.tileentity.ITickableTileEntity;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.tileentity.TileEntityType;
 import net.minecraft.util.Direction;
@@ -12,14 +14,20 @@ import net.minecraftforge.common.util.LazyOptional;
 import net.minecraftforge.items.CapabilityItemHandler;
 import net.minecraftforge.items.IItemHandler;
 import net.minecraftforge.items.ItemStackHandler;
+import org.xkmc.polaris.container.ObsidianNetherFurnaceItemNumber;
+import org.xkmc.polaris.data.recipes.ObsidianFurnaceRecipe;
+import org.xkmc.polaris.data.recipes.PolarisRecipeTypes;
 import org.xkmc.polaris.item.PolarisItems;
 
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
+import java.util.Optional;
 
-public class ObsidianNetherFurnaceTile extends TileEntity {
+public class ObsidianNetherFurnaceTile extends TileEntity implements ITickableTileEntity {
     private final ItemStackHandler itemHandler = createHandler();
     private final LazyOptional<IItemHandler> handler = LazyOptional.of(() -> itemHandler);
+    private Inventory inventory = new Inventory(1);
+    private ObsidianNetherFurnaceItemNumber itemNumber = new ObsidianNetherFurnaceItemNumber();
 
     public ObsidianNetherFurnaceTile(TileEntityType<?> tileEntityTypeIn) {
         super(tileEntityTypeIn);
@@ -77,6 +85,12 @@ public class ObsidianNetherFurnaceTile extends TileEntity {
         };
     }
 
+    @Override
+    @Nonnull
+    public TileEntityType<?> getType() {
+        return PolarisTileEntities.obsidianNetherFurnaceTile.get();
+    }
+
     @Nonnull
     @Override
     public <T> LazyOptional<T> getCapability(@Nonnull Capability<T> cap, @Nullable Direction side) {
@@ -86,19 +100,30 @@ public class ObsidianNetherFurnaceTile extends TileEntity {
         return super.getCapability(cap);
     }
 
-/*
-    public void lightningHasStruck() {
-        boolean hasFocusInFirstSlot = this.itemHandler.getStackInSlot(0).getCount() > 0
-                && this.itemHandler.getStackInSlot(0).getItem() == Items.GLASS_PANE;
-        boolean hasHeartInSecondSlot = this.itemHandler.getStackInSlot(0).getCount() > 0
-                && this.itemHandler.getStackInSlot(0).getItem() == PolarisItems.HeartOfOre.get();
-        if (hasFocusInFirstSlot && hasHeartInSecondSlot) {
-            this.itemHandler.getStackInSlot(0).shrink(1);
-            this.itemHandler.getStackInSlot(1).shrink(1);
-
-            this.itemHandler.insertItem(1, new ItemStack(PolarisItems.InactiveCore4.get()), false);
+    public void craft() {
+        Inventory inv = new Inventory(itemHandler.getSlots());
+        for (int i = 0; i < itemHandler.getSlots(); i++) {
+            inv.setItem(i, itemHandler.getStackInSlot(i));
         }
-    }
-*/
 
+        Optional<ObsidianFurnaceRecipe> recipe = this.level.getRecipeManager()
+                .getRecipeFor(PolarisRecipeTypes.OBSIDIAN_FURNACE_RECIPE_TYPE, inv, this.level);
+
+        recipe.ifPresent(iRecipe -> {
+            ItemStack output = iRecipe.getResultItem();
+            craftTheItem(output);
+            setChanged();
+        });
+    }
+
+    private void craftTheItem(ItemStack output) {
+        itemHandler.extractItem(0, 1, false);
+        itemHandler.extractItem(1, 1, false);
+        itemHandler.insertItem(1, output, false);
+    }
+
+    @Override
+    public void tick() {
+        craft();
+    }
 }

@@ -1,6 +1,7 @@
 package org.xkmc.polaris;
 
 import net.minecraft.block.Block;
+import net.minecraft.client.gui.ScreenManager;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
@@ -14,6 +15,8 @@ import net.minecraftforge.fml.event.server.FMLServerStartingEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import org.xkmc.polaris.container.PolarisContainers;
+import org.xkmc.polaris.screen.ObsidianNetherFurnaceScreen;
 import org.xkmc.polaris.util.Registration;
 
 import java.util.stream.Collectors;
@@ -52,6 +55,9 @@ public class Polaris
     private void doClientStuff(final FMLClientSetupEvent event) {
         // do something that can only be done on the client
         LOGGER.info("Got game settings {}", event.getMinecraftSupplier().get().options);
+        event.enqueueWork(() -> {
+            ScreenManager.register(PolarisContainers.OBSIDIAN_NETHER_FURNACE_CONTAINER.get(), ObsidianNetherFurnaceScreen::new);
+        });
     }
 
     private void enqueueIMC(final InterModEnqueueEvent event)

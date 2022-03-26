@@ -1,51 +1,57 @@
 package org.xkmc.polaris.data.recipes;
 
-import com.google.gson.JsonArray;
-import com.google.gson.JsonObject;
 import net.minecraft.inventory.IInventory;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.crafting.*;
-import net.minecraft.network.PacketBuffer;
-import net.minecraft.util.JSONUtils;
 import net.minecraft.util.NonNullList;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.world.World;
-import net.minecraftforge.registries.ForgeRegistryEntry;
+import org.xkmc.polaris.Polaris;
 
 import javax.annotation.Nonnull;
+import javax.annotation.ParametersAreNonnullByDefault;
 
-public class ObsidianFurnaceRecipe extends AbstractCookingRecipe {
+public class ObsidianFurnaceRecipe extends AbstractCookingRecipe implements IRecipe<IInventory> {
+    protected final IRecipeType<?> type;
+    protected final ResourceLocation id;
+    protected final String group;
+    protected final Ingredient ingredient;
+    protected final ItemStack result;
+    protected final float experience;
+    protected final int cookingTime;
 
-    private static IRecipeType<?> type;
-    private static ResourceLocation resourceLocation;
-    private static String group;
-    private static NonNullList<Ingredient> ingredient;
-    private static ItemStack result;
-    private static float experience;
-    private static int cookingTime;
+    public ObsidianFurnaceRecipe(IRecipeType<?> type, ResourceLocation id, String group, Ingredient ingredient, ItemStack result, float experience, int cookingTime) {
+        super(type, id, group, ingredient, result, experience, cookingTime);
+        this.type = type;
+        this.id = id;
+        this.group = group;
+        this.ingredient = ingredient;
+        this.result = result;
+        this.experience = experience;
+        this.cookingTime = cookingTime;
+    }
 
     @Override
     public int getCookingTime() {
-        return cookingTime;
-    }
-
-    public ObsidianFurnaceRecipe(IRecipeType<?> type, ResourceLocation resourceLocation, String group, NonNullList<Ingredient> ingredient, ItemStack result, float experience, int cookingTime) {
-        super(type, resourceLocation, group, Ingredient.merge(ingredient), result, experience, cookingTime);
+        return this.cookingTime;
     }
 
     @Override
+    @Nonnull
     public ResourceLocation getId() {
-        return id;
+        return this.id;
     }
 
     @Override
+    @Nonnull
     public IRecipeSerializer<?> getSerializer() {
         return PolarisRecipeTypes.OBSIDIAN_FURNACE_SERIALIZER.get();
     }
 
     @Override
+    @Nonnull
     public IRecipeType<?> getType() {
-        return type;
+        return this.type;
     }
 
     @Override
@@ -54,32 +60,37 @@ public class ObsidianFurnaceRecipe extends AbstractCookingRecipe {
     }
 
     @Override
+    @ParametersAreNonnullByDefault
     public boolean matches(IInventory inventory, World worldIn) {
-        if (ingredient.get(0).test(inventory.getItem(0))) {
-            return ingredient.get(1).test(inventory.getItem(1));
+        if (ingredient.test(inventory.getItem(0))) {
+            return ingredient.test(inventory.getItem(1));
         }
         return false;
     }
 
     @Override
+    @Nonnull
     public NonNullList<Ingredient> getIngredients() {
-        return super.getIngredients();
+        NonNullList<Ingredient> ingredients = NonNullList.create();
+        ingredients.add(Ingredient.merge(ingredients));
+        return ingredients;
     }
 
     @Override
     public float getExperience() {
-        return super.getExperience();
+        return this.experience;
     }
 
     @Override
+    @Nonnull
     public String getGroup() {
-        return super.getGroup();
+        return this.group;
     }
 
     @Override
     @Nonnull
     public ItemStack assemble(@Nonnull IInventory inventory) {
-        return result;
+        return this.result.copy();
     }
 
     @Override
@@ -90,49 +101,13 @@ public class ObsidianFurnaceRecipe extends AbstractCookingRecipe {
     @Override
     @Nonnull
     public ItemStack getResultItem() {
-        return result.copy();
+        return this.result;
     }
 
     public static class ObsidianFurnaceRecipeType implements IRecipeType<ObsidianFurnaceRecipe> {
         @Override
         public String toString() {
-            return resourceLocation.toString();
-        }
-    }
-
-    public static class Serializer extends ForgeRegistryEntry<IRecipeSerializer<?>> implements IRecipeSerializer<ObsidianFurnaceRecipe> {
-
-        @Override
-        @Nonnull
-        public ObsidianFurnaceRecipe fromJson(@Nonnull ResourceLocation recipeId, @Nonnull JsonObject json) {
-            ItemStack result = ShapedRecipe.itemFromJson(JSONUtils.getAsJsonObject(json, "result"));
-            JsonArray ingredients = JSONUtils.getAsJsonArray(json, "ingredients");
-            NonNullList<Ingredient> inputs = NonNullList.withSize(2, Ingredient.EMPTY);
-            for (int i = 0; i < inputs.size(); i++) {
-                inputs.set(i, Ingredient.fromJson(ingredients.get(i)));
-            }
-
-            return new ObsidianFurnaceRecipe();
-        }
-
-        @Override
-        public ObsidianFurnaceRecipe fromNetwork(@Nonnull ResourceLocation resourceLocation, @Nonnull PacketBuffer buffer) {
-            NonNullList<Ingredient> inputs = NonNullList.withSize(2, Ingredient.EMPTY);
-
-            for (int i = 0; i < inputs.size(); i++) {
-                inputs.set(i, Ingredient.fromNetwork(buffer));
-            }
-            ItemStack result = buffer.readItem();
-            return new ObsidianFurnaceRecipe();
-        }
-
-        @Override
-        public void toNetwork(PacketBuffer buffer, ObsidianFurnaceRecipe recipe) {
-            buffer.writeInt(recipe.getIngredients().size());
-            for (Ingredient ingredient : recipe.getIngredients()) {
-                ingredient.toNetwork(buffer);
-            }
-            buffer.writeItemStack(recipe.getResultItem().copy(), false);
+            return new ResourceLocation(Polaris.MOD_ID, "obsidian_furnace").toString();
         }
     }
 }

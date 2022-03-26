@@ -11,6 +11,8 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import org.xkmc.polaris.Polaris;
 import org.xkmc.polaris.blocks.PolarisBlocks;
+import org.xkmc.polaris.container.PolarisContainers;
+import org.xkmc.polaris.data.recipes.PolarisRecipeTypes;
 import org.xkmc.polaris.item.PolarisItems;
 import org.xkmc.polaris.tileentity.PolarisTileEntities;
 
@@ -25,6 +27,7 @@ public class Registration {
             Polaris.MOD_ID);
     public static final DeferredRegister<IRecipeSerializer<?>> RECIPE_SERIALIZER =
             DeferredRegister.create(ForgeRegistries.RECIPE_SERIALIZERS, Polaris.MOD_ID);
+
     public static void register(){
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
         BLOCKS.register(modEventBus);
@@ -35,6 +38,7 @@ public class Registration {
         PolarisItems.register();
         PolarisBlocks.register();
         PolarisTileEntities.register();
-
+        PolarisContainers.register();
+        PolarisRecipeTypes.register();
     }
 }
