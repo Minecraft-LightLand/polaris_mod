@@ -1,20 +1,19 @@
 {
-  "group": "polaris",
   "type": "minecraft:crafting_shaped",
   "pattern": [
     "AAA",
-    "ACA",
-    "BBB"
+    "ABA",
+    "CCC"
   ],
   "key": {
     "A": {
       "item": "minecraft:netherite_ingot"
     },
     "B": {
-      "item": "minecraft:gold_ingot"
+      "item": "minecraft:furnace"
     },
     "C": {
-      "item": "minecraft:furnace"
+      "item": "minecraft:gold_ingot"
     }
   },
   "result": {
