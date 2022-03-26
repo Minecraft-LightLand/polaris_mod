@@ -15,28 +15,28 @@ import javax.annotation.ParametersAreNonnullByDefault;
 @MethodsReturnNonnullByDefault
 public class RecSerializer<R extends IRecipe<I>, I extends IInventory> extends ForgeRegistryEntry<IRecipeSerializer<?>> implements IRecipeSerializer<R> {
 
-    public final Class<R> cls;
+	public final Class<R> cls;
 
-    public RecSerializer(Class<R> cls) {
-        this.cls = cls;
-    }
+	public RecSerializer(Class<R> cls) {
+		this.cls = cls;
+	}
 
-    @Override
-    public R fromJson(ResourceLocation id, JsonObject json) {
-        return Serializer.from(json, cls,
-                ExceptionHandler.get(() -> cls.getConstructor(ResourceLocation.class).newInstance(id)));
+	@Override
+	public R fromJson(ResourceLocation id, JsonObject json) {
+		return Serializer.from(json, cls,
+				ExceptionHandler.get(() -> cls.getConstructor(ResourceLocation.class).newInstance(id)));
 
-    }
+	}
 
-    @Override
-    public R fromNetwork(ResourceLocation id, PacketBuffer buf) {
-        return Serializer.from(buf, cls,
-                ExceptionHandler.get(() -> cls.getConstructor(ResourceLocation.class).newInstance(id)));
-    }
+	@Override
+	public R fromNetwork(ResourceLocation id, PacketBuffer buf) {
+		return Serializer.from(buf, cls,
+				ExceptionHandler.get(() -> cls.getConstructor(ResourceLocation.class).newInstance(id)));
+	}
 
-    @Override
-    public void toNetwork(PacketBuffer buf, R recipe) {
-        Serializer.to(buf, recipe);
-    }
+	@Override
+	public void toNetwork(PacketBuffer buf, R recipe) {
+		Serializer.to(buf, recipe);
+	}
 
 }

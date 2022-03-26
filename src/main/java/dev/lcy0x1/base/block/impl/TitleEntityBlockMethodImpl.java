@@ -17,27 +17,27 @@ import java.util.function.Supplier;
 
 public class TitleEntityBlockMethodImpl implements TitleEntityBlockMethod, OnClickBlockMethod {
 
-    private final Supplier<? extends TileEntity> f;
+	private final Supplier<? extends TileEntity> f;
 
-    public TitleEntityBlockMethodImpl(Supplier<? extends TileEntity> f) {
-        this.f = f;
-    }
+	public TitleEntityBlockMethodImpl(Supplier<? extends TileEntity> f) {
+		this.f = f;
+	}
 
-    @Override
-    public TileEntity createTileEntity(BlockState state, IBlockReader world) {
-        return f.get();
-    }
+	@Override
+	public TileEntity createTileEntity(BlockState state, IBlockReader world) {
+		return f.get();
+	}
 
-    @Override
-    public ActionResultType onClick(BlockState bs, World w, BlockPos pos, PlayerEntity pl, Hand h, BlockRayTraceResult r) {
-        TileEntity te = w.getBlockEntity(pos);
-        if (w.isClientSide())
-            return te instanceof INamedContainerProvider ? ActionResultType.SUCCESS : ActionResultType.PASS;
-        if (te instanceof INamedContainerProvider) {
-            pl.openMenu((INamedContainerProvider) te);
-            return ActionResultType.SUCCESS;
-        }
-        return ActionResultType.PASS;
-    }
+	@Override
+	public ActionResultType onClick(BlockState bs, World w, BlockPos pos, PlayerEntity pl, Hand h, BlockRayTraceResult r) {
+		TileEntity te = w.getBlockEntity(pos);
+		if (w.isClientSide())
+			return te instanceof INamedContainerProvider ? ActionResultType.SUCCESS : ActionResultType.PASS;
+		if (te instanceof INamedContainerProvider) {
+			pl.openMenu((INamedContainerProvider) te);
+			return ActionResultType.SUCCESS;
+		}
+		return ActionResultType.PASS;
+	}
 
 }

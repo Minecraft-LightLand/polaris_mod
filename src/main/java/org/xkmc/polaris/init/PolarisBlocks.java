@@ -6,7 +6,6 @@ import net.minecraft.block.Block;
 import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
 import net.minecraftforge.common.ToolType;
-import org.xkmc.polaris.init.Polaris;
 
 public class PolarisBlocks {
 

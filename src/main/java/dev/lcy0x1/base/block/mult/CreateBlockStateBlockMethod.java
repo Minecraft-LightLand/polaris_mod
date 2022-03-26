@@ -7,6 +7,6 @@ import net.minecraft.state.StateContainer;
 
 public interface CreateBlockStateBlockMethod extends MultipleBlockMethod {
 
-    void createBlockStateDefinition(StateContainer.Builder<Block, BlockState> builder);
+	void createBlockStateDefinition(StateContainer.Builder<Block, BlockState> builder);
 
 }

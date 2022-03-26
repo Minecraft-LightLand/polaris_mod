@@ -7,5 +7,5 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.IBlockReader;
 
 public interface LightBlockMethod extends SingletonBlockMethod {
-    int getLightValue(BlockState bs, IBlockReader w, BlockPos pos);
+	int getLightValue(BlockState bs, IBlockReader w, BlockPos pos);
 }

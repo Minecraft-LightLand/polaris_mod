@@ -9,6 +9,6 @@ import java.util.Random;
 
 public interface RandomTickBlockMethod extends MultipleBlockMethod {
 
-    void randomTick(BlockState state, ServerWorld world, BlockPos pos, Random random);
+	void randomTick(BlockState state, ServerWorld world, BlockPos pos, Random random);
 
 }

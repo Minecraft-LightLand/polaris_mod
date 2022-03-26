@@ -9,29 +9,29 @@ import java.util.function.Supplier;
 
 public class NamedEntry<T extends NamedEntry<T>> extends ForgeRegistryEntry<T> {
 
-    private final Supplier<IForgeRegistry<T>> registry;
+	private final Supplier<IForgeRegistry<T>> registry;
 
-    private String desc = null;
+	private String desc = null;
 
-    public NamedEntry(Supplier<IForgeRegistry<T>> registry) {
-        this.registry = registry;
-    }
+	public NamedEntry(Supplier<IForgeRegistry<T>> registry) {
+		this.registry = registry;
+	}
 
-    public String getDescriptionId() {
-        if (desc != null)
-            return desc;
-        ResourceLocation rl = getRegistryName();
-        ResourceLocation reg = registry.get().getRegistryName();
-        desc = reg.toString() + "." + rl.toString();
-        return desc;
-    }
+	public String getDescriptionId() {
+		if (desc != null)
+			return desc;
+		ResourceLocation rl = getRegistryName();
+		ResourceLocation reg = registry.get().getRegistryName();
+		desc = reg.toString() + "." + rl.toString();
+		return desc;
+	}
 
-    public TranslationTextComponent getDesc() {
-        return new TranslationTextComponent(getDescriptionId());
-    }
+	public TranslationTextComponent getDesc() {
+		return new TranslationTextComponent(getDescriptionId());
+	}
 
-    public String getID() {
-        return getRegistryName().toString();
-    }
+	public String getID() {
+		return getRegistryName().toString();
+	}
 
 }

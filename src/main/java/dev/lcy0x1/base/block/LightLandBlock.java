@@ -10,12 +10,12 @@ import javax.annotation.ParametersAreNonnullByDefault;
 @MethodsReturnNonnullByDefault
 public class LightLandBlock extends Block {
 
-    public static LightLandBlock newBaseBlock(LightLandBlockProperties p, BlockMethod... impl) {
-        return new LightLandBlockImpl(p, impl);
-    }
+	public static LightLandBlock newBaseBlock(LightLandBlockProperties p, BlockMethod... impl) {
+		return new LightLandBlockImpl(p, impl);
+	}
 
-    protected LightLandBlock(Properties props) {
-        super(props);
-    }
+	protected LightLandBlock(Properties props) {
+		super(props);
+	}
 
 }

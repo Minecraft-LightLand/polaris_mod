@@ -6,7 +6,7 @@ import net.minecraft.util.Mirror;
 import net.minecraft.util.Rotation;
 
 public interface MirrorRotateBlockMethod extends SingletonBlockMethod {
-    BlockState mirror(BlockState state, Mirror mirrorIn);
+	BlockState mirror(BlockState state, Mirror mirrorIn);
 
-    BlockState rotate(BlockState state, Rotation rot);
+	BlockState rotate(BlockState state, Rotation rot);
 }

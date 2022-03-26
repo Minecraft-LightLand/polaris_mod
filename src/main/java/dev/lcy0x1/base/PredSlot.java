@@ -12,26 +12,26 @@ import java.util.function.Predicate;
 @ParametersAreNonnullByDefault
 public class PredSlot extends Slot {
 
-    private final Predicate<ItemStack> pred;
-    private BooleanSupplier pickup;
+	private final Predicate<ItemStack> pred;
+	private BooleanSupplier pickup;
 
-    public PredSlot(IInventory inv, int ind, int x, int y, Predicate<ItemStack> pred) {
-        super(inv, ind, x, y);
-        this.pred = pred;
-    }
+	public PredSlot(IInventory inv, int ind, int x, int y, Predicate<ItemStack> pred) {
+		super(inv, ind, x, y);
+		this.pred = pred;
+	}
 
-    public PredSlot setPickup(BooleanSupplier pickup) {
-        this.pickup = pickup;
-        return this;
-    }
+	public PredSlot setPickup(BooleanSupplier pickup) {
+		this.pickup = pickup;
+		return this;
+	}
 
-    @Override
-    public boolean mayPlace(ItemStack stack) {
-        return pred.test(stack);
-    }
+	@Override
+	public boolean mayPlace(ItemStack stack) {
+		return pred.test(stack);
+	}
 
-    @Override
-    public boolean mayPickup(PlayerEntity player) {
-        return super.mayPickup(player);
-    }
+	@Override
+	public boolean mayPickup(PlayerEntity player) {
+		return super.mayPickup(player);
+	}
 }

@@ -10,16 +10,16 @@ import net.minecraft.state.StateContainer;
 
 public class AllDireBlockMethodImpl implements PlacementBlockMethod, CreateBlockStateBlockMethod {
 
-    public AllDireBlockMethodImpl() {
-    }
+	public AllDireBlockMethodImpl() {
+	}
 
-    @Override
-    public void createBlockStateDefinition(StateContainer.Builder<Block, BlockState> builder) {
-        builder.add(BlockProxy.FACING);
-    }
+	@Override
+	public void createBlockStateDefinition(StateContainer.Builder<Block, BlockState> builder) {
+		builder.add(BlockProxy.FACING);
+	}
 
-    @Override
-    public BlockState getStateForPlacement(BlockState def, BlockItemUseContext context) {
-        return def.setValue(BlockProxy.FACING, context.getClickedFace().getOpposite());
-    }
+	@Override
+	public BlockState getStateForPlacement(BlockState def, BlockItemUseContext context) {
+		return def.setValue(BlockProxy.FACING, context.getClickedFace().getOpposite());
+	}
 }

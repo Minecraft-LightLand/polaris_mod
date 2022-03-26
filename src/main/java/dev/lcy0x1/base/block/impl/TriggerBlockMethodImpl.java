@@ -12,31 +12,31 @@ import net.minecraft.world.World;
 
 public class TriggerBlockMethodImpl implements NeighborUpdateBlockMethod, CreateBlockStateBlockMethod, DefaultStateBlockMethod {
 
-    private final int delay;
+	private final int delay;
 
-    public TriggerBlockMethodImpl(int delay) {
-        this.delay = delay;
-    }
+	public TriggerBlockMethodImpl(int delay) {
+		this.delay = delay;
+	}
 
-    @Override
-    public void neighborChanged(Block self, BlockState state, World world, BlockPos pos, Block nei_block, BlockPos nei_pos, boolean moving) {
-        boolean flag = world.hasNeighborSignal(pos) || world.hasNeighborSignal(pos.above());
-        boolean flag1 = state.getValue(BlockStateProperties.TRIGGERED);
-        if (flag && !flag1) {
-            world.getBlockTicks().scheduleTick(pos, self, delay);
-            world.setBlock(pos, state.setValue(BlockStateProperties.TRIGGERED, Boolean.TRUE), delay);
-        } else if (!flag && flag1) {
-            world.setBlock(pos, state.setValue(BlockStateProperties.TRIGGERED, Boolean.FALSE), delay);
-        }
-    }
+	@Override
+	public void neighborChanged(Block self, BlockState state, World world, BlockPos pos, Block nei_block, BlockPos nei_pos, boolean moving) {
+		boolean flag = world.hasNeighborSignal(pos) || world.hasNeighborSignal(pos.above());
+		boolean flag1 = state.getValue(BlockStateProperties.TRIGGERED);
+		if (flag && !flag1) {
+			world.getBlockTicks().scheduleTick(pos, self, delay);
+			world.setBlock(pos, state.setValue(BlockStateProperties.TRIGGERED, Boolean.TRUE), delay);
+		} else if (!flag && flag1) {
+			world.setBlock(pos, state.setValue(BlockStateProperties.TRIGGERED, Boolean.FALSE), delay);
+		}
+	}
 
-    @Override
-    public void createBlockStateDefinition(StateContainer.Builder<Block, BlockState> builder) {
-        builder.add(BlockStateProperties.TRIGGERED);
-    }
+	@Override
+	public void createBlockStateDefinition(StateContainer.Builder<Block, BlockState> builder) {
+		builder.add(BlockStateProperties.TRIGGERED);
+	}
 
-    @Override
-    public BlockState getDefaultState(BlockState state) {
-        return state.setValue(BlockStateProperties.TRIGGERED, false);
-    }
+	@Override
+	public BlockState getDefaultState(BlockState state) {
+		return state.setValue(BlockStateProperties.TRIGGERED, false);
+	}
 }

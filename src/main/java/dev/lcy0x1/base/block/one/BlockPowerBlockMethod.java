@@ -8,5 +8,5 @@ import net.minecraft.world.IBlockReader;
 
 public interface BlockPowerBlockMethod extends SingletonBlockMethod {
 
-    int getSignal(BlockState bs, IBlockReader r, BlockPos pos, Direction d);
+	int getSignal(BlockState bs, IBlockReader r, BlockPos pos, Direction d);
 }

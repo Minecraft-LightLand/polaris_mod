@@ -8,6 +8,6 @@ import net.minecraft.world.World;
 
 public interface NeighborUpdateBlockMethod extends MultipleBlockMethod {
 
-    void neighborChanged(Block self, BlockState state, World world, BlockPos pos, Block nei_block, BlockPos nei_pos, boolean moving);
+	void neighborChanged(Block self, BlockState state, World world, BlockPos pos, Block nei_block, BlockPos nei_pos, boolean moving);
 
 }

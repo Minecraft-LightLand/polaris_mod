@@ -6,9 +6,9 @@ import net.minecraft.tileentity.TileEntity;
 import net.minecraft.world.IBlockReader;
 
 public interface TitleEntityBlockMethod extends SingletonBlockMethod {
-    default boolean hasTileEntity(BlockState state) {
-        return true;
-    }
+	default boolean hasTileEntity(BlockState state) {
+		return true;
+	}
 
-    TileEntity createTileEntity(BlockState state, IBlockReader world);
+	TileEntity createTileEntity(BlockState state, IBlockReader world);
 }

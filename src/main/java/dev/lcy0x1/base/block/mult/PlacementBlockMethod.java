@@ -6,6 +6,6 @@ import net.minecraft.item.BlockItemUseContext;
 
 public interface PlacementBlockMethod extends MultipleBlockMethod {
 
-    BlockState getStateForPlacement(BlockState def, BlockItemUseContext context);
+	BlockState getStateForPlacement(BlockState def, BlockItemUseContext context);
 
 }

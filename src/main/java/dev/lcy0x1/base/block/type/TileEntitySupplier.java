@@ -6,6 +6,6 @@ import java.util.function.Supplier;
 
 public interface TileEntitySupplier extends BlockMethod, Supplier<TileEntity> {
 
-    @Override
-    TileEntity get();
+	@Override
+	TileEntity get();
 }

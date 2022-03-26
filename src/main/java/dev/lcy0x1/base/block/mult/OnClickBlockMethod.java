@@ -11,6 +11,6 @@ import net.minecraft.world.World;
 
 public interface OnClickBlockMethod extends MultipleBlockMethod {
 
-    ActionResultType onClick(BlockState bs, World w, BlockPos pos, PlayerEntity pl, Hand h, BlockRayTraceResult r);
+	ActionResultType onClick(BlockState bs, World w, BlockPos pos, PlayerEntity pl, Hand h, BlockRayTraceResult r);
 
 }
