@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "polaris:star_coin_7_from_star_coin_8"
+    ]
+  },
+  "criteria": {
+    "has_star_coin_8": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "polaris:star_coin_8"
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "polaris:star_coin_7_from_star_coin_8"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_star_coin_8",
+      "has_the_recipe"
+    ]
+  ]
+}

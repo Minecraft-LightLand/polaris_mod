@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "polaris:star_coin_6"
+    }
+  ],
+  "result": {
+    "item": "polaris:star_coin_5",
+    "count": 9
+  }
+}

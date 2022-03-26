@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XXX",
+    "XXX",
+    "XXX"
+  ],
+  "key": {
+    "X": {
+      "item": "polaris:star_coin_3"
+    }
+  },
+  "result": {
+    "item": "polaris:star_coin_4"
+  }
+}
