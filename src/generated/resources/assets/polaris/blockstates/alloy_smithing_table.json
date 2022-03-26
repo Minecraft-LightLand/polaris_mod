@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "polaris:block/alloy_smithing_table"
+    },
+    "facing=south": {
+      "model": "polaris:block/alloy_smithing_table",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "polaris:block/alloy_smithing_table",
+      "y": 270
+    },
+    "facing=east": {
+      "model": "polaris:block/alloy_smithing_table",
+      "y": 90
+    }
+  }
+}

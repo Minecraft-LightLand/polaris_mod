@@ -21,7 +21,7 @@ public class LightLandBlockProperties {
 		this(Block.Properties.of(mat), hard, rest);
 	}
 
-	private LightLandBlockProperties(Block.Properties mat) {
+	public LightLandBlockProperties(Block.Properties mat) {
 		props = mat;
 	}
 

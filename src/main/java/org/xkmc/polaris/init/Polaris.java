@@ -22,11 +22,13 @@ import java.util.stream.Collectors;
 
 @Mod(Polaris.MODID)
 public class Polaris {
+
 	public static final String MODID = "polaris";
 	public static final Logger LOGGER = LogManager.getLogger();
-	public static final Registrate REGISTRATE = Registrate.create(MODID);
+	public static Registrate REGISTRATE;
 
 	public Polaris() {
+		REGISTRATE = Registrate.create(MODID);
 		Registration.register();
 		FMLJavaModLoadingContext.get().getModEventBus().addListener(this::setup);
 		FMLJavaModLoadingContext.get().getModEventBus().addListener(this::enqueueIMC);

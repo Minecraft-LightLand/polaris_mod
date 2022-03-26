@@ -1,6 +1,0 @@
-{
-    "parent": "item/generated",
-    "textures": {
-        "layer0": "polaris:item/the_soil_of_everything"
-    }
-}

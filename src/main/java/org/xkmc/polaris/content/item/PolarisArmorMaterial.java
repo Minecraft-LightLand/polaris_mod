@@ -40,7 +40,7 @@ public enum PolarisArmorMaterial implements IArmorMaterial {
 			SoundEvents.ARMOR_EQUIP_NETHERITE, 3.0F, 0.1F, () -> Ingredient.of(PolarisItems.THE_SOIL_OF_EVERYTHING.get())),
 	LittleCatPink("little_cat_pink", 5, new int[]{4, 8, 6, 4}, 15,
 			SoundEvents.ARMOR_EQUIP_NETHERITE, 3.0F, 0.1F, () -> Ingredient.of(PolarisItems.THE_SOIL_OF_EVERYTHING.get()));
-	private final String name;
+	public final String name;
 	private final int durabilityMultiplier;
 	private final int[] slotProtections;
 	private final int enchantmentValue;

@@ -72,7 +72,7 @@ public class PolarisItems {
 			int n = 8;
 			STAR_COIN = new ItemEntry[n];
 			for (int i = 0; i < n; i++) {
-				STAR_COIN[i] = Polaris.REGISTRATE.item("star_coin_" + i, Item::new)
+				STAR_COIN[i] = Polaris.REGISTRATE.item("star_coin_" + (i + 1), Item::new)
 						.defaultModel().defaultLang().register();
 			}
 		}
@@ -81,13 +81,13 @@ public class PolarisItems {
 			ARMORS = new ItemEntry[n][4];
 			for (int i = 0; i < n; i++) {
 				PolarisArmorMaterial mat = PolarisArmorMaterial.values()[i];
-				ARMORS[i][0] = Polaris.REGISTRATE.item(mat.getName() + "_helmet",
+				ARMORS[i][0] = Polaris.REGISTRATE.item(mat.name + "_helmet",
 						p -> new PolarisArmors(mat, EquipmentSlotType.HEAD, p)).defaultModel().defaultLang().register();
-				ARMORS[i][1] = Polaris.REGISTRATE.item(mat.getName() + "_chestplate",
+				ARMORS[i][1] = Polaris.REGISTRATE.item(mat.name + "_chestplate",
 						p -> new PolarisArmors(mat, EquipmentSlotType.CHEST, p)).defaultModel().defaultLang().register();
-				ARMORS[i][2] = Polaris.REGISTRATE.item(mat.getName() + "_leggings",
+				ARMORS[i][2] = Polaris.REGISTRATE.item(mat.name + "_leggings",
 						p -> new PolarisArmors(mat, EquipmentSlotType.LEGS, p)).defaultModel().defaultLang().register();
-				ARMORS[i][3] = Polaris.REGISTRATE.item(mat.getName() + "_boots",
+				ARMORS[i][3] = Polaris.REGISTRATE.item(mat.name + "_boots",
 						p -> new PolarisArmors(mat, EquipmentSlotType.FEET, p)).defaultModel().defaultLang().register();
 			}
 		}
