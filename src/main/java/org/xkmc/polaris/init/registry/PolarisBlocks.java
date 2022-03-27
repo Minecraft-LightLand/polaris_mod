@@ -20,6 +20,7 @@ import net.minecraftforge.client.model.generators.ModelFile;
 import net.minecraftforge.common.ToolType;
 import org.xkmc.polaris.content.blocks.AlloySmithingTableContainer;
 import org.xkmc.polaris.content.blocks.ObsidianNetherFurnaceTile;
+import org.xkmc.polaris.content.item.PolarisItemGroup;
 import org.xkmc.polaris.init.Polaris;
 
 public class PolarisBlocks {
@@ -30,6 +31,7 @@ public class PolarisBlocks {
 	public static final TileEntityEntry<ObsidianNetherFurnaceTile> OBSIDIAN_NETHER_FURNACE_TILE;
 
 	static {
+		Polaris.REGISTRATE.itemGroup(() -> PolarisItemGroup.TAB_POLARIS_BLOCKS);
 		LightLandBlockProperties prop = new LightLandBlockProperties(AbstractBlock.Properties.of(Material.STONE)
 				.requiresCorrectToolForDrops().sound(SoundType.STONE).harvestTool(ToolType.PICKAXE).harvestLevel(2));
 
@@ -67,7 +69,7 @@ public class PolarisBlocks {
 						blockTex(base + "_side"),
 						blockTex(base + "_side"),
 						blockTex(base + "_side"))
-				.texture("particles", blockTex(base + "_top"));
+				.texture("particle", blockTex(base + "_top"));
 	}
 
 	public static void register() {

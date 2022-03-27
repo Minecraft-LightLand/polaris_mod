@@ -18,10 +18,6 @@ import java.util.Locale;
 @SuppressWarnings({"rawtype", "unchecked", "unused"})
 public class PolarisItems {
 
-	static {
-		Polaris.REGISTRATE.itemGroup(() -> PolarisItemGroup.TAB_POLARIS_MISCELLANEOUS);
-	}
-
 	public enum SimpleItem {
 		PURGATORY_SOIL,
 		DEMON_SOUL,
@@ -85,6 +81,7 @@ public class PolarisItems {
 	public static final ItemEntry<PolarisArmors>[][] ARMORS;
 
 	static {
+		Polaris.REGISTRATE.itemGroup(() -> PolarisItemGroup.TAB_POLARIS_MISCELLANEOUS);
 		SimpleItem.register();
 		RuneCoreItem.register();
 		{
@@ -102,6 +99,7 @@ public class PolarisItems {
 						.defaultModel().defaultLang().register();
 			}
 		}
+		Polaris.REGISTRATE.itemGroup(() -> PolarisItemGroup.TAB_POLARIS_ARMORS);
 		{
 			int n = PolarisArmorMaterial.values().length;
 			ARMORS = new ItemEntry[n][4];

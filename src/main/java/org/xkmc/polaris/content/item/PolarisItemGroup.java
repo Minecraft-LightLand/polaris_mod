@@ -3,7 +3,6 @@ package org.xkmc.polaris.content.item;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
-import org.xkmc.polaris.init.Polaris;
 import org.xkmc.polaris.init.registry.PolarisItems;
 
 public class PolarisItemGroup {

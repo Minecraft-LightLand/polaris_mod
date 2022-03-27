@@ -1,6 +1,9 @@
 package dev.lcy0x1.base.block;
 
-import dev.lcy0x1.base.block.impl.*;
+import dev.lcy0x1.base.block.impl.AllDireBlockMethodImpl;
+import dev.lcy0x1.base.block.impl.HorizontalBlockMethodImpl;
+import dev.lcy0x1.base.block.impl.PowerBlockMethodImpl;
+import dev.lcy0x1.base.block.impl.TriggerBlockMethodImpl;
 import dev.lcy0x1.base.block.type.BlockMethod;
 import net.minecraft.state.DirectionProperty;
 import net.minecraft.state.properties.BlockStateProperties;

@@ -7,6 +7,6 @@
     "south": "polaris:block/alloy_smithing_table_side",
     "east": "polaris:block/alloy_smithing_table_side",
     "west": "polaris:block/alloy_smithing_table_side",
-    "particles": "polaris:block/alloy_smithing_table_top"
+    "particle": "polaris:block/alloy_smithing_table_top"
   }
 }

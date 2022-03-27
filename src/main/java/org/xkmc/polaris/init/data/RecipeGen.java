@@ -3,10 +3,14 @@ package org.xkmc.polaris.init.data;
 import com.tterrag.registrate.providers.RegistrateRecipeProvider;
 import com.tterrag.registrate.util.DataIngredient;
 import net.minecraft.block.Blocks;
+import net.minecraft.data.CookingRecipeBuilder;
 import net.minecraft.data.ShapedRecipeBuilder;
+import net.minecraft.item.Item;
 import net.minecraft.item.Items;
+import net.minecraft.item.crafting.Ingredient;
 import org.xkmc.polaris.init.registry.PolarisBlocks;
 import org.xkmc.polaris.init.registry.PolarisItems;
+import org.xkmc.polaris.init.registry.PolarisRecipeTypes;
 
 public class RecipeGen {
 
@@ -19,13 +23,22 @@ public class RecipeGen {
 		}
 		{
 			ShapedRecipeBuilder.shaped(PolarisBlocks.ALLOY_SMITHING_TABLE.get())
-					.pattern("AAA").pattern("ABA").pattern("CCC")
-					.define('A', Items.NETHERITE_INGOT)
+					.pattern(" A ").pattern("ABA").pattern(" A ")
+					.define('A', Blocks.NETHERITE_BLOCK)
 					.define('B', Blocks.CRAFTING_TABLE)
-					.define('C', Items.GOLD_INGOT)
-					.unlockedBy("has_" + pvd.safeName(Items.NETHERITE_INGOT),
-							DataIngredient.items(Items.NETHERITE_INGOT).getCritereon(pvd))
+					.unlockedBy("has_" + pvd.safeName(Items.NETHERITE_BLOCK),
+							DataIngredient.items(Items.NETHERITE_BLOCK).getCritereon(pvd))
 					.save(pvd);
 		}
+		{
+			netherFurnace(Items.NETHERITE_INGOT, PolarisItems.SimpleItem.NETHER_ALLOY_ESSENCE.entry.get(), 1);
+			netherFurnace(PolarisItems.SimpleItem.END_ALLOY_INGOT.entry.get(), PolarisItems.SimpleItem.END_ESSENCE.entry.get(), 1);
+		}
 	}
+
+	private static void netherFurnace(Item in, Item out, int mult) {
+		CookingRecipeBuilder.cooking(Ingredient.of(in), out,
+				0.1f, 1200 * mult, PolarisRecipeTypes.RS_OBSIDIAN_FURNACE.get());
+	}
+
 }

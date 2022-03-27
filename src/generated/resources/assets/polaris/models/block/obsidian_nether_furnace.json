@@ -7,6 +7,6 @@
     "south": "polaris:block/obsidian_nether_furnace_side",
     "east": "polaris:block/obsidian_nether_furnace_side",
     "west": "polaris:block/obsidian_nether_furnace_side",
-    "particles": "polaris:block/obsidian_nether_furnace_top"
+    "particle": "polaris:block/obsidian_nether_furnace_top"
   }
 }
