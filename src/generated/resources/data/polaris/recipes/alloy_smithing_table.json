@@ -10,13 +10,13 @@
       "item": "minecraft:netherite_ingot"
     },
     "B": {
-      "item": "minecraft:furnace"
+      "item": "minecraft:crafting_table"
     },
     "C": {
       "item": "minecraft:gold_ingot"
     }
   },
   "result": {
-    "item": "polaris:obsidian_nether_furnace"
+    "item": "polaris:alloy_smithing_table"
   }
 }

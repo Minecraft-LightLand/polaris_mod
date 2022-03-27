@@ -48,6 +48,7 @@ public class Polaris {
 
 	private void clientSetup(final FMLClientSetupEvent event) {
 		event.enqueueWork(() -> {
+			PolarisClient.registerItemProperties();
 		});
 	}
 

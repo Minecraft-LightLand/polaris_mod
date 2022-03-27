@@ -18,10 +18,10 @@ public class RecipeGen {
 			}
 		}
 		{
-			ShapedRecipeBuilder.shaped(PolarisBlocks.OBSIDIAN_NETHER_FURNACE.get())
+			ShapedRecipeBuilder.shaped(PolarisBlocks.ALLOY_SMITHING_TABLE.get())
 					.pattern("AAA").pattern("ABA").pattern("CCC")
 					.define('A', Items.NETHERITE_INGOT)
-					.define('B', Blocks.FURNACE)
+					.define('B', Blocks.CRAFTING_TABLE)
 					.define('C', Items.GOLD_INGOT)
 					.unlockedBy("has_" + pvd.safeName(Items.NETHERITE_INGOT),
 							DataIngredient.items(Items.NETHERITE_INGOT).getCritereon(pvd))

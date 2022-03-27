@@ -35,7 +35,7 @@ public class PolarisBlocks {
 
 		ALLOY_SMITHING_TABLE = Polaris.REGISTRATE.block("alloy_smithing_table",
 						p -> LightLandBlock.newBaseBlock(prop, BlockProxy.HORIZONTAL,
-								new ContainerBlockMethodImpl<>("container.alloy_smithing_table", AlloySmithingTableContainer::new)))
+								new ContainerBlockMethodImpl<>("container.alloy_smithing_table_container", AlloySmithingTableContainer::new)))
 				.blockstate((ctx, pvd) -> pvd.horizontalBlock(ctx.getEntry(),
 						four_side(ctx, pvd, "alloy_smithing_table", "_front", "")))
 				.defaultLang().defaultLoot().simpleItem().register();

@@ -3,6 +3,7 @@ package org.xkmc.polaris.content.item;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
+import org.xkmc.polaris.init.Polaris;
 import org.xkmc.polaris.init.registry.PolarisItems;
 
 public class PolarisItemGroup {
@@ -23,7 +24,7 @@ public class PolarisItemGroup {
 		TAB_POLARIS_BLOCKS = new ItemGroup("tab_polaris_blocks") {
 			@Override
 			public ItemStack makeIcon() {
-				return new ItemStack(PolarisItems.LIFE_OF_SEEDS.get());
+				return new ItemStack(PolarisItems.SimpleItem.LIFE_OF_SEEDS.entry.get());
 			}
 		};
 	}
