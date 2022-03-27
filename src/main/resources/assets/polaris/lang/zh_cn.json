@@ -88,7 +88,7 @@
     "item.polaris.empty_rune_core": "空白符文核心",
     "container.polaris.alloy_smithing_table_container": "下界合金锻造台",
     "container.polaris.obsidian_nether_furnace_container": "下界合金炼制炉",
-    "block.polaris.upgrade": "升级",
+    "container.polaris.cost": "合成费用: %s",
     "itemGroup.tab_polaris_armors": "北极星 - 盔甲",
     "itemGroup.tab_polaris_blocks": "北极星 - 方块",
     "itemGroup.tab_polaris_miscellaneous": "北极星 - 杂项"

@@ -8,7 +8,6 @@ import net.minecraft.inventory.CraftingInventory;
 import net.minecraft.inventory.IInventory;
 import net.minecraft.inventory.container.Container;
 import net.minecraft.inventory.container.ContainerType;
-import net.minecraft.inventory.container.CraftingResultSlot;
 import net.minecraft.inventory.container.Slot;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.crafting.ICraftingRecipe;
@@ -29,6 +28,8 @@ public class AlloySmithingTableContainer extends Container {
 	private final IWorldPosCallable access;
 	private final PlayerEntity player;
 
+	final SmithingResultSlot result_slot;
+
 	public AlloySmithingTableContainer(ContainerType<AlloySmithingTableContainer> type, int wid, PlayerInventory plinv) {
 		this(wid, plinv, IWorldPosCallable.NULL);
 	}
@@ -37,7 +38,7 @@ public class AlloySmithingTableContainer extends Container {
 		super(PolarisContainers.CT_ALLOY_SMITHING_TABLE.get(), wid);
 		this.access = pos;
 		this.player = plinv.player;
-		this.addSlot(new CraftingResultSlot(plinv.player, this.craftSlots, this.resultSlots, 0, 124, 35));
+		this.addSlot(result_slot = new SmithingResultSlot(plinv.player, this.craftSlots, this.resultSlots, 0, 124, 35));
 
 		for (int i = 0; i < 3; ++i) {
 			for (int j = 0; j < 3; ++j) {
@@ -138,4 +139,7 @@ public class AlloySmithingTableContainer extends Container {
 		return slot.container != this.resultSlots && super.canTakeItemForPickAll(stack, slot);
 	}
 
+	public int getCost() {
+		return resultSlots.isEmpty() ? 0 : 3;
+	}
 }

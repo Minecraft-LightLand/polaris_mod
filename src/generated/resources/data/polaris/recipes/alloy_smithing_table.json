@@ -1,19 +1,16 @@
 {
   "type": "minecraft:crafting_shaped",
   "pattern": [
-    "AAA",
+    " A ",
     "ABA",
-    "CCC"
+    " A "
   ],
   "key": {
     "A": {
-      "item": "minecraft:netherite_ingot"
+      "item": "minecraft:netherite_block"
     },
     "B": {
       "item": "minecraft:crafting_table"
-    },
-    "C": {
-      "item": "minecraft:gold_ingot"
     }
   },
   "result": {

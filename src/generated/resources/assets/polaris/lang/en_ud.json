@@ -1,7 +1,9 @@
 {
   "block.polaris.alloy_smithing_table": "\u01DD\u05DFq\u0250\u27D8 bu\u0131\u0265\u0287\u0131\u026FS \u028Eo\u05DF\u05DF\u2C6F",
+  "block.polaris.eternal_furnace": "\u01DD\u0254\u0250u\u0279n\u2132 \u05DF\u0250u\u0279\u01DD\u0287\u018E",
   "block.polaris.obsidian_nether_furnace": "\u01DD\u0254\u0250u\u0279n\u2132 \u0279\u01DD\u0265\u0287\u01DDN u\u0250\u0131p\u0131sqO",
   "container.polaris.alloy_smithing_table_container": "\u0279\u01DDu\u0131\u0250\u0287uo\u0186 \u01DD\u05DFq\u0250\u27D8 bu\u0131\u0265\u0287\u0131\u026FS \u028Eo\u05DF\u05DF\u2C6F",
+  "container.polaris.eternal_furnace_container": "\u0279\u01DDu\u0131\u0250\u0287uo\u0186 \u01DD\u0254\u0250u\u0279n\u2132 \u05DF\u0250u\u0279\u01DD\u0287\u018E",
   "container.polaris.obsidian_nether_furnace_container": "\u0279\u01DDu\u0131\u0250\u0287uo\u0186 \u01DD\u0254\u0250u\u0279n\u2132 \u0279\u01DD\u0265\u0287\u01DDN u\u0250\u0131p\u0131sqO",
   "item.polaris.crying_ghost": "\u0287so\u0265\u2141 bu\u0131\u028E\u0279\u0186",
   "item.polaris.demon_soul": "\u05DFnoS uo\u026F\u01DD\u15E1",

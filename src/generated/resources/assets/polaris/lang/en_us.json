@@ -1,7 +1,9 @@
 {
   "block.polaris.alloy_smithing_table": "Alloy Smithing Table",
+  "block.polaris.eternal_furnace": "Eternal Furnace",
   "block.polaris.obsidian_nether_furnace": "Obsidian Nether Furnace",
   "container.polaris.alloy_smithing_table_container": "Alloy Smithing Table Container",
+  "container.polaris.eternal_furnace_container": "Eternal Furnace Container",
   "container.polaris.obsidian_nether_furnace_container": "Obsidian Nether Furnace Container",
   "item.polaris.crying_ghost": "Crying Ghost",
   "item.polaris.demon_soul": "Demon Soul",

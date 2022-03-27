@@ -19,6 +19,7 @@ import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.client.model.generators.ModelFile;
 import net.minecraftforge.common.ToolType;
 import org.xkmc.polaris.content.blocks.AlloySmithingTableContainer;
+import org.xkmc.polaris.content.blocks.EternalFurnaceTile;
 import org.xkmc.polaris.content.blocks.ObsidianNetherFurnaceTile;
 import org.xkmc.polaris.content.item.PolarisItemGroup;
 import org.xkmc.polaris.init.Polaris;
@@ -27,8 +28,10 @@ public class PolarisBlocks {
 
 	public static final BlockEntry<LightLandBlock> ALLOY_SMITHING_TABLE;
 	public static final BlockEntry<LightLandBlock> OBSIDIAN_NETHER_FURNACE;
+	public static final BlockEntry<LightLandBlock> ETERNAL_FURNACE;
 
 	public static final TileEntityEntry<ObsidianNetherFurnaceTile> OBSIDIAN_NETHER_FURNACE_TILE;
+	public static final TileEntityEntry<EternalFurnaceTile> ETERNAL_FURNACE_TILE;
 
 	static {
 		Polaris.REGISTRATE.itemGroup(() -> PolarisItemGroup.TAB_POLARIS_BLOCKS);
@@ -52,9 +55,22 @@ public class PolarisBlocks {
 						}
 				).defaultLang().defaultLoot().simpleItem().register();
 
+		ETERNAL_FURNACE = Polaris.REGISTRATE.block("eternal_furnace",
+						p -> LightLandBlock.newBaseBlock(prop, BlockProxy.HORIZONTAL, new LitBlockMethodImpl(13),
+								new TitleEntityBlockMethodImpl(() -> PolarisBlocks.ETERNAL_FURNACE_TILE)))
+				.blockstate((ctx, pvd) -> {
+							ModelFile off = four_side(ctx, pvd, "eternal_furnace", "_front", "");
+							ModelFile on = four_side(ctx, pvd, "eternal_furnace", "_on", "_on");
+							pvd.horizontalBlock(ctx.getEntry(), state -> state.getValue(BlockStateProperties.LIT) ? on : off);
+						}
+				).defaultLang().defaultLoot().simpleItem().register();
+
 		OBSIDIAN_NETHER_FURNACE_TILE =
 				Polaris.REGISTRATE.tileEntity("obsidian_nether_furnace_tile", ObsidianNetherFurnaceTile::new)
 						.validBlock(PolarisBlocks.OBSIDIAN_NETHER_FURNACE).register();
+		ETERNAL_FURNACE_TILE =
+				Polaris.REGISTRATE.tileEntity("eternal_furnace_tile", EternalFurnaceTile::new)
+						.validBlock(PolarisBlocks.ETERNAL_FURNACE).register();
 	}
 
 	private static ResourceLocation blockTex(String str) {

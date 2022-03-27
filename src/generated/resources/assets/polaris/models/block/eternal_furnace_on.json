@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "down": "polaris:block/eternal_furnace_bottom",
+    "up": "polaris:block/eternal_furnace_top",
+    "north": "polaris:block/eternal_furnace_on",
+    "south": "polaris:block/eternal_furnace_side",
+    "east": "polaris:block/eternal_furnace_side",
+    "west": "polaris:block/eternal_furnace_side",
+    "particle": "polaris:block/eternal_furnace_top"
+  }
+}
