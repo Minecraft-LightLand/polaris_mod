@@ -1,10 +1,10 @@
 package org.xkmc.polaris.init.registry;
 
 import com.tterrag.registrate.util.entry.RegistryEntry;
+import net.minecraft.item.crafting.CookingRecipeSerializer;
 import net.minecraft.item.crafting.IRecipeSerializer;
 import net.minecraft.item.crafting.IRecipeType;
 import org.xkmc.polaris.content.recipes.AlloySmithingRecipe;
-import org.xkmc.polaris.content.recipes.CookingRecipeSerializer;
 import org.xkmc.polaris.content.recipes.ObsidianFurnaceRecipe;
 import org.xkmc.polaris.init.Polaris;
 
@@ -18,7 +18,7 @@ public class PolarisRecipeTypes {
 					() -> new CookingRecipeSerializer<>(ObsidianFurnaceRecipe::new, 100));
 
 	public static final RegistryEntry<AlloySmithingRecipe.Serializer> RS_ALLOY_SMITHING =
-			Polaris.REGISTRATE.simple("allow_smithing", IRecipeSerializer.class,
+			Polaris.REGISTRATE.simple("alloy_smithing", IRecipeSerializer.class,
 					AlloySmithingRecipe.Serializer::new);
 
 	public static void register() {
