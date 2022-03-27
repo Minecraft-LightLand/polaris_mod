@@ -17,6 +17,7 @@ import net.minecraft.network.play.server.SSetSlotPacket;
 import net.minecraft.util.IWorldPosCallable;
 import net.minecraft.world.World;
 import org.xkmc.polaris.content.recipes.AlloySmithingRecipe;
+import org.xkmc.polaris.init.registry.PolarisBlocks;
 import org.xkmc.polaris.init.registry.PolarisContainers;
 import org.xkmc.polaris.init.registry.PolarisRecipeTypes;
 
@@ -85,7 +86,7 @@ public class AlloySmithingTableContainer extends Container {
 	}
 
 	public boolean stillValid(PlayerEntity player) {
-		return stillValid(this.access, player, Blocks.CRAFTING_TABLE);
+		return stillValid(this.access, player, PolarisBlocks.ALLOY_SMITHING_TABLE.get());
 	}
 
 	public ItemStack quickMoveStack(PlayerEntity player, int index) {
