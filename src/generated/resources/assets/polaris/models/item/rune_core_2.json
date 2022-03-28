@@ -2,13 +2,5 @@
   "parent": "minecraft:item/generated",
   "textures": {
     "layer0": "polaris:item/rune_core_2"
-  },
-  "overrides": [
-    {
-      "predicate": {
-        "polaris:activated": 1.0
-      },
-      "model": "polaris:item/rune_core_2_activated"
-    }
-  ]
+  }
 }

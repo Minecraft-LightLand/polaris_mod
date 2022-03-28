@@ -29,6 +29,13 @@ public class RecipeGen {
 					.unlockedBy("has_" + pvd.safeName(Items.NETHERITE_BLOCK),
 							DataIngredient.items(Items.NETHERITE_BLOCK).getCritereon(pvd))
 					.save(pvd);
+			new AlloySmithingRecipeBuilder(PolarisBlocks.OBSIDIAN_NETHER_FURNACE.get(),1)
+					.pattern(" A ").pattern("ABA").pattern(" A ")
+					.define('A', Blocks.NETHERITE_BLOCK)
+					.define('B', Blocks.FURNACE)
+					.unlockedBy("has_" + pvd.safeName(Items.NETHERITE_BLOCK),
+							DataIngredient.items(Items.NETHERITE_BLOCK).getCritereon(pvd))
+					.save(pvd);
 		}
 		{
 			netherFurnace(pvd, Items.NETHERITE_INGOT, PolarisItems.SimpleItem.NETHER_ALLOY_ESSENCE.entry.get(), 1);

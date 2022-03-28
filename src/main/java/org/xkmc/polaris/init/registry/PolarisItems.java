@@ -32,7 +32,17 @@ public class PolarisItems {
 		SPIRIT_OF_DIVINITY,
 		LIFE_OF_SEEDS,
 		CRYING_GHOST,
-		EMPTY_RUNE_CORE;
+		EMPTY_RUNE_CORE,
+		RUNE_CORE_1,
+		RUNE_CORE_2,
+		RUNE_CORE_3,
+		RUNE_CORE_4,
+		POWER_RUNE_CORE,
+		RUNE_CORE_1_ACTIVATED,
+		RUNE_CORE_2_ACTIVATED,
+		RUNE_CORE_3_ACTIVATED,
+		RUNE_CORE_4_ACTIVATED,
+		POWER_RUNE_CORE_ACTIVATED;
 
 		public final ItemEntry<Item> entry;
 
@@ -47,11 +57,7 @@ public class PolarisItems {
 	}
 
 	public enum RuneCoreItem {
-		RUNE_CORE_1,
-		RUNE_CORE_2,
-		RUNE_CORE_3,
-		RUNE_CORE_4,
-		POWER_RUNE_CORE;
+		;
 
 		public static final ResourceLocation ID = new ResourceLocation(Polaris.MODID, "activated");
 
