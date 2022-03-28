@@ -30,14 +30,14 @@ public class RecipeGen {
 					PolarisItems.SimpleItem.NETHERITE_ESSENCE.entry.get());
 			cross(pvd, PolarisItems.SimpleItem.END_ALLOY_INGOT.entry.get(),
 					PolarisItems.SimpleItem.REFINED_NETHERITE_INGOT.entry.get(),
-					PolarisItems.SimpleItem.REFINED_NETHERITE_ESSENCE.entry.get());
+					PolarisItems.SimpleItem.END_ESSENCE.entry.get());
 			symmetric(pvd, PolarisItems.SimpleItem.CRYING_GHOST.entry.get(),
 					Items.GHAST_TEAR, Items.BLAZE_POWDER, Items.GHAST_TEAR);
 			symmetric(pvd, PolarisItems.SimpleItem.NETHER_STAR.entry.get(),
 					PolarisItems.SimpleItem.CRYING_GHOST.entry.get(), Items.NETHER_STAR,
 					PolarisItems.SimpleItem.FLAME_OF_THE_SOUL.entry.get());
 			symmetric(pvd, PolarisItems.SimpleItem.THE_VOID_OF_SOURCE.entry.get(),
-					PolarisItems.SimpleItem.REFINED_NETHERITE_ESSENCE.entry.get(),
+					PolarisItems.SimpleItem.END_ESSENCE.entry.get(),
 					PolarisItems.SimpleItem.CRYING_GHOST.entry.get(),
 					PolarisItems.SimpleItem.FLAME_OF_THE_SOUL.entry.get());
 
@@ -120,7 +120,7 @@ public class RecipeGen {
 		{
 			netherFurnace(pvd, Items.NETHERITE_INGOT, PolarisItems.SimpleItem.NETHERITE_ESSENCE.entry.get(), 1);
 			netherFurnace(pvd, PolarisItems.SimpleItem.REFINED_NETHERITE_INGOT.entry.get(),
-					PolarisItems.SimpleItem.REFINED_NETHERITE_ESSENCE.entry.get(), 4);
+					PolarisItems.SimpleItem.END_ESSENCE.entry.get(), 4);
 			netherFurnace(pvd, PolarisItems.SimpleItem.NETHER_STAR.entry.get(),
 					PolarisItems.SimpleItem.NETHER_STAR_ESSENCE.entry.get(), 8);
 			netherFurnace(pvd, PolarisItems.SimpleItem.RUNE_CORE_1.entry.get(),

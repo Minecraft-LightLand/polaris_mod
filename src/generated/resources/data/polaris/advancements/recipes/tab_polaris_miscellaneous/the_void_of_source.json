@@ -6,12 +6,12 @@
     ]
   },
   "criteria": {
-    "has_refined_netherite_essence": {
+    "has_end_essence": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
           {
-            "item": "polaris:refined_netherite_essence"
+            "item": "polaris:end_essence"
           }
         ]
       }
@@ -25,7 +25,7 @@
   },
   "requirements": [
     [
-      "has_refined_netherite_essence",
+      "has_end_essence",
       "has_the_recipe"
     ]
   ]

@@ -2,7 +2,7 @@
   "parent": "minecraft:recipes/root",
   "rewards": {
     "recipes": [
-      "polaris:refined_netherite_essence"
+      "polaris:end_essence"
     ]
   },
   "criteria": {
@@ -19,7 +19,7 @@
     "has_the_recipe": {
       "trigger": "minecraft:recipe_unlocked",
       "conditions": {
-        "recipe": "polaris:refined_netherite_essence"
+        "recipe": "polaris:end_essence"
       }
     }
   },
