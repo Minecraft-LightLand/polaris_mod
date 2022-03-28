@@ -13,12 +13,9 @@ import dev.lcy0x1.base.block.impl.TitleEntityBlockMethodImpl;
 import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
-import net.minecraft.block.SoundType;
-import net.minecraft.block.material.Material;
 import net.minecraft.state.properties.BlockStateProperties;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.client.model.generators.ModelFile;
-import net.minecraftforge.common.ToolType;
 import org.xkmc.polaris.content.blocks.AlloySmithingTableContainer;
 import org.xkmc.polaris.content.blocks.EternalFurnaceTile;
 import org.xkmc.polaris.content.blocks.ObsidianNetherFurnaceTile;
@@ -42,7 +39,7 @@ public class PolarisBlocks {
 						p -> LightLandBlock.newBaseBlock(prop, BlockProxy.HORIZONTAL,
 								new ContainerBlockMethodImpl<>("container.polaris.alloy_smithing_table_container", AlloySmithingTableContainer::new)))
 				.blockstate((ctx, pvd) -> pvd.horizontalBlock(ctx.getEntry(),
-						four_side(ctx, pvd, "alloy_smithing_table", "_front", "")))
+						six_side(ctx, pvd, "alloy_smithing_table")))
 				.defaultLang().defaultLoot().simpleItem().register();
 
 		OBSIDIAN_NETHER_FURNACE = Polaris.REGISTRATE.block("obsidian_nether_furnace",
@@ -85,6 +82,17 @@ public class PolarisBlocks {
 						blockTex(base + "_side"),
 						blockTex(base + "_side"),
 						blockTex(base + "_side"))
+				.texture("particle", blockTex(base + "_top"));
+	}
+
+	private static ModelFile six_side(DataGenContext<Block, LightLandBlock> ctx, RegistrateBlockstateProvider pvd, String base) {
+		return pvd.models().cube(ctx.getName(),
+						blockTex(base + "_bottom"),
+						blockTex(base + "_top"),
+						blockTex(base + "_0"),
+						blockTex(base + "_1"),
+						blockTex(base + "_2"),
+						blockTex(base + "_3"))
 				.texture("particle", blockTex(base + "_top"));
 	}
 
