@@ -31,14 +31,17 @@ public class RecipeGen {
 					.save(pvd);
 		}
 		{
-			netherFurnace(Items.NETHERITE_INGOT, PolarisItems.SimpleItem.NETHER_ALLOY_ESSENCE.entry.get(), 1);
-			netherFurnace(PolarisItems.SimpleItem.END_ALLOY_INGOT.entry.get(), PolarisItems.SimpleItem.END_ESSENCE.entry.get(), 1);
+			netherFurnace(pvd, Items.NETHERITE_INGOT, PolarisItems.SimpleItem.NETHER_ALLOY_ESSENCE.entry.get(), 1);
+			netherFurnace(pvd, PolarisItems.SimpleItem.END_ALLOY_INGOT.entry.get(), PolarisItems.SimpleItem.END_ESSENCE.entry.get(), 2);
 		}
 	}
 
-	private static void netherFurnace(Item in, Item out, int mult) {
+	private static void netherFurnace(RegistrateRecipeProvider pvd, Item in, Item out, int mult) {
 		CookingRecipeBuilder.cooking(Ingredient.of(in), out,
-				0.1f, 1200 * mult, PolarisRecipeTypes.RS_OBSIDIAN_FURNACE.get());
+						0.1f, 1200 * mult, PolarisRecipeTypes.RS_OBSIDIAN_FURNACE.get())
+				.unlockedBy("has_" + pvd.safeName(in),
+						DataIngredient.items(in).getCritereon(pvd))
+				.save(pvd);
 	}
 
 }

@@ -27,6 +27,9 @@ public class PolarisGeneralEventHandler {
 			player.abilities.flying &= armorfly;
 			player.onUpdateAbilities();
 		}
+		if (player.getHealth() > player.getMaxHealth()) {
+			player.setHealth(player.getMaxHealth());
+		}
 
 	}
 

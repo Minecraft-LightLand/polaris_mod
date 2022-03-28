@@ -1,0 +1,9 @@
+{
+  "type": "polaris:obsidian_furnace",
+  "ingredient": {
+    "item": "polaris:end_alloy_ingot"
+  },
+  "result": "polaris:end_essence",
+  "experience": 0.1,
+  "cookingtime": 2400
+}

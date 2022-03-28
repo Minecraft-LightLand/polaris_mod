@@ -1,9 +1,11 @@
 package org.xkmc.polaris.content.blocks;
 
+import net.minecraft.block.BlockState;
 import net.minecraft.entity.player.PlayerInventory;
 import net.minecraft.inventory.container.Container;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.crafting.IRecipeType;
+import net.minecraft.nbt.CompoundNBT;
 import net.minecraft.tileentity.AbstractFurnaceTileEntity;
 import net.minecraft.util.text.ITextComponent;
 import net.minecraft.util.text.TranslationTextComponent;
@@ -50,5 +52,20 @@ public class EternalFurnaceTile extends AbstractFurnaceTileEntity {
 	@Override
 	protected int getTotalCookTime() {
 		return super.getTotalCookTime() / 2;
+	}
+
+	@Override
+	public void load(BlockState state, CompoundNBT nbt) {
+		super.load(state, nbt);
+		if (nbt.contains("fuel_duration")) {
+			litDuration = nbt.getInt("fuel_duration");
+		}
+	}
+
+	@Override
+	public CompoundNBT save(CompoundNBT nbt) {
+		nbt = super.save(nbt);
+		nbt.putInt("fuel_duration", litDuration);
+		return nbt;
 	}
 }
