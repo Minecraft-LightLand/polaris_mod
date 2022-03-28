@@ -23,6 +23,7 @@ public class RecipeGen {
 				pvd.storage(PolarisItems.STAR_COIN[i], PolarisItems.STAR_COIN[i + 1]);
 			}
 		}
+		// regular materials
 		{
 			cross(pvd, PolarisBlocks.OBSIDIAN_NETHER_FURNACE.get(), Blocks.FURNACE, Blocks.NETHERITE_BLOCK);
 			cross(pvd, PolarisItems.SimpleItem.REFINED_NETHERITE_INGOT.entry.get(), Items.IRON_INGOT,
@@ -53,6 +54,7 @@ public class RecipeGen {
 					PolarisItems.SimpleItem.REFINED_NETHERITE_INGOT.entry.get(),
 					PolarisItems.SimpleItem.DEMON_SOUL.entry.get());
 		}
+		// special materials
 		{
 			ShapedRecipeBuilder.shaped(PolarisBlocks.ALLOY_SMITHING_TABLE.get())
 					.pattern(" A ").pattern("ABA").pattern(" A ")
@@ -114,6 +116,7 @@ public class RecipeGen {
 					.define('I', Items.SPIDER_EYE).save(pvd);
 
 		}
+		// furnace
 		{
 			netherFurnace(pvd, Items.NETHERITE_INGOT, PolarisItems.SimpleItem.NETHERITE_ESSENCE.entry.get(), 1);
 			netherFurnace(pvd, PolarisItems.SimpleItem.REFINED_NETHERITE_INGOT.entry.get(),
@@ -131,6 +134,7 @@ public class RecipeGen {
 			netherFurnace(pvd, PolarisItems.SimpleItem.POWER_RUNE_CORE.entry.get(),
 					PolarisItems.SimpleItem.POWER_RUNE_CORE_ACTIVATED.entry.get(), 64);
 		}
+		// armors
 		{
 			Item[] netherite = new Item[]{Items.NETHERITE_HELMET, Items.NETHERITE_CHESTPLATE, Items.NETHERITE_LEGGINGS, Items.NETHERITE_BOOTS};
 			for (int i = 0; i < 4; i++) {

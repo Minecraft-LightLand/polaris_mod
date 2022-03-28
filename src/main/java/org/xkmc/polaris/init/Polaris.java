@@ -13,6 +13,7 @@ import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.xkmc.polaris.event.PolarisGeneralEventHandler;
+import org.xkmc.polaris.init.data.AdvancementGen;
 import org.xkmc.polaris.init.data.RecipeGen;
 import org.xkmc.polaris.init.registry.PolarisBlocks;
 import org.xkmc.polaris.init.registry.PolarisContainers;
@@ -34,6 +35,7 @@ public class Polaris {
 		PolarisContainers.register();
 		PolarisRecipeTypes.register();
 		Polaris.REGISTRATE.addDataGenerator(ProviderType.RECIPE, RecipeGen::genRecipe);
+		Polaris.REGISTRATE.addDataGenerator(ProviderType.ADVANCEMENT, AdvancementGen::genAdvancement);
 
 		FMLJavaModLoadingContext.get().getModEventBus().addListener(this::commonSetup);
 		FMLJavaModLoadingContext.get().getModEventBus().addListener(this::clientSetup);
