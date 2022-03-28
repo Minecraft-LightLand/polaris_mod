@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "ABA",
+    "ACA",
+    "ADA"
+  ],
+  "key": {
+    "A": {
+      "item": "polaris:refined_netherite_ingot"
+    },
+    "B": {
+      "item": "polaris:the_void_of_source"
+    },
+    "C": {
+      "item": "polaris:rune_core_2_activated"
+    },
+    "D": {
+      "item": "polaris:ms_base_boots"
+    }
+  },
+  "result": {
+    "item": "polaris:stardust_boots"
+  }
+}

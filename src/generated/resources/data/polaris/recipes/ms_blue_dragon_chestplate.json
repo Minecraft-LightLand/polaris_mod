@@ -1,0 +1,28 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "ABA",
+    "ACA",
+    "EDE"
+  ],
+  "key": {
+    "B": {
+      "item": "minecraft:emerald"
+    },
+    "A": {
+      "item": "polaris:refined_netherite_ingot"
+    },
+    "C": {
+      "item": "polaris:rune_core_1_activated"
+    },
+    "E": {
+      "item": "polaris:crying_ghost"
+    },
+    "D": {
+      "item": "polaris:ms_base_chestplate"
+    }
+  },
+  "result": {
+    "item": "polaris:ms_blue_dragon_chestplate"
+  }
+}

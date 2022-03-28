@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "polaris:supreme_genesis_helmet"
+    ]
+  },
+  "criteria": {
+    "has_power_rune_core_activated": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "polaris:power_rune_core_activated"
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "polaris:supreme_genesis_helmet"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_power_rune_core_activated",
+      "has_the_recipe"
+    ]
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " A ",
+    "ABA",
+    "CDE"
+  ],
+  "key": {
+    "A": {
+      "item": "minecraft:bone_meal"
+    },
+    "B": {
+      "item": "minecraft:grass_block"
+    },
+    "C": {
+      "item": "minecraft:mycelium"
+    },
+    "D": {
+      "item": "minecraft:sand"
+    },
+    "E": {
+      "item": "minecraft:podzol"
+    }
+  },
+  "result": {
+    "item": "polaris:the_soil_of_everything"
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "152",
+    "ACA",
+    "3B4"
+  ],
+  "key": {
+    "A": {
+      "item": "polaris:spirit_of_divinity"
+    },
+    "B": {
+      "item": "polaris:the_void_of_source"
+    },
+    "C": {
+      "item": "polaris:power_rune_core_activated"
+    },
+    "1": {
+      "item": "polaris:ms_blue_dragon_helmet"
+    },
+    "2": {
+      "item": "polaris:ms_white_tiger_helmet"
+    },
+    "3": {
+      "item": "polaris:ms_vermilion_bird_helmet"
+    },
+    "4": {
+      "item": "polaris:ms_black_tortoise_helmet"
+    },
+    "5": {
+      "item": "polaris:star_lord_helmet"
+    }
+  },
+  "result": {
+    "item": "polaris:supreme_genesis_helmet"
+  }
+}

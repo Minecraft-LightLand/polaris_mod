@@ -1,0 +1,28 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " A ",
+    " B ",
+    "CDE"
+  ],
+  "key": {
+    "A": {
+      "item": "minecraft:ghast_tear"
+    },
+    "B": {
+      "item": "minecraft:blaze_powder"
+    },
+    "C": {
+      "item": "minecraft:soul_sand"
+    },
+    "D": {
+      "item": "minecraft:magma_block"
+    },
+    "E": {
+      "item": "minecraft:soul_soil"
+    }
+  },
+  "result": {
+    "item": "polaris:purgatory_soil"
+  }
+}

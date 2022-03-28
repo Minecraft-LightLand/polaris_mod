@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "polaris:ms_blue_dragon_leggings"
+    ]
+  },
+  "criteria": {
+    "has_ms_base_leggings": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "polaris:ms_base_leggings"
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "polaris:ms_blue_dragon_leggings"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_ms_base_leggings",
+      "has_the_recipe"
+    ]
+  ]
+}

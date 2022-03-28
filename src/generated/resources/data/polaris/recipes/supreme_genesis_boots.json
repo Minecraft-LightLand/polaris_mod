@@ -1,0 +1,37 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "152",
+    "ACA",
+    "3B4"
+  ],
+  "key": {
+    "A": {
+      "item": "polaris:spirit_of_divinity"
+    },
+    "B": {
+      "item": "polaris:the_void_of_source"
+    },
+    "C": {
+      "item": "polaris:power_rune_core_activated"
+    },
+    "1": {
+      "item": "polaris:ms_blue_dragon_boots"
+    },
+    "2": {
+      "item": "polaris:ms_white_tiger_boots"
+    },
+    "3": {
+      "item": "polaris:ms_vermilion_bird_boots"
+    },
+    "4": {
+      "item": "polaris:ms_black_tortoise_boots"
+    },
+    "5": {
+      "item": "polaris:star_lord_boots"
+    }
+  },
+  "result": {
+    "item": "polaris:supreme_genesis_boots"
+  }
+}

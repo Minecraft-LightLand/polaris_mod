@@ -1,0 +1,28 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "A B",
+    " C ",
+    "D E"
+  ],
+  "key": {
+    "A": {
+      "item": "minecraft:cocoa_beans"
+    },
+    "B": {
+      "item": "minecraft:beetroot_seeds"
+    },
+    "C": {
+      "item": "minecraft:wheat_seeds"
+    },
+    "D": {
+      "item": "minecraft:pumpkin_seeds"
+    },
+    "E": {
+      "item": "minecraft:melon_seeds"
+    }
+  },
+  "result": {
+    "item": "polaris:life_of_seeds"
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "EBE",
+    "FCF",
+    "ADA"
+  ],
+  "key": {
+    "B": {
+      "item": "minecraft:blaze_powder"
+    },
+    "F": {
+      "item": "minecraft:feather"
+    },
+    "A": {
+      "item": "polaris:refined_netherite_ingot"
+    },
+    "C": {
+      "item": "polaris:rune_core_1_activated"
+    },
+    "E": {
+      "item": "polaris:purgatory_soil"
+    },
+    "D": {
+      "item": "polaris:ms_base_helmet"
+    }
+  },
+  "result": {
+    "item": "polaris:ms_vermilion_bird_helmet"
+  }
+}

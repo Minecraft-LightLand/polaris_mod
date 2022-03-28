@@ -1,0 +1,31 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "BAE",
+    "ACA",
+    "FDB"
+  ],
+  "key": {
+    "A": {
+      "item": "polaris:end_alloy_ingot"
+    },
+    "B": {
+      "item": "polaris:nether_star_essence"
+    },
+    "C": {
+      "item": "polaris:rune_core_4_activated"
+    },
+    "D": {
+      "item": "polaris:starburst_leggings"
+    },
+    "E": {
+      "item": "polaris:spirit_of_divinity"
+    },
+    "F": {
+      "item": "polaris:the_void_of_source"
+    }
+  },
+  "result": {
+    "item": "polaris:star_lord_leggings"
+  }
+}

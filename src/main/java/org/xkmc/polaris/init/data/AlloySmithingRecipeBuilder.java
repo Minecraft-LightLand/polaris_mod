@@ -1,5 +1,7 @@
 package org.xkmc.polaris.init.data;
 
+import com.tterrag.registrate.providers.RegistrateRecipeProvider;
+import com.tterrag.registrate.util.DataIngredient;
 import net.minecraft.advancements.Advancement;
 import net.minecraft.advancements.AdvancementRewards;
 import net.minecraft.advancements.IRequirementsStrategy;
@@ -11,6 +13,7 @@ import net.minecraft.item.crafting.IRecipeSerializer;
 import net.minecraft.item.crafting.Ingredient;
 import net.minecraft.util.IItemProvider;
 import net.minecraft.util.ResourceLocation;
+import org.xkmc.polaris.init.registry.PolarisRecipeTypes;
 
 import java.util.List;
 import java.util.Map;
@@ -32,6 +35,13 @@ public class AlloySmithingRecipeBuilder extends ShapedRecipeBuilder {
 				"recipes/" + this.result.getItemCategory().getRecipeFolderName() + "/" + id.getPath())));
 	}
 
+
+	public AlloySmithingRecipeBuilder unlockedBy(RegistrateRecipeProvider pvd, IItemProvider item) {
+		this.advancement.addCriterion("has_" + pvd.safeName(item.asItem()),
+				DataIngredient.items(item.asItem()).getCritereon(pvd));
+		return this;
+	}
+
 	class Result extends ShapedRecipeBuilder.Result {
 
 		public Result(ResourceLocation id, Item result, int count, String group, List<String> pattern,
@@ -41,7 +51,7 @@ public class AlloySmithingRecipeBuilder extends ShapedRecipeBuilder {
 
 		@Override
 		public IRecipeSerializer<?> getType() {
-			return super.getType();
+			return PolarisRecipeTypes.RS_ALLOY_SMITHING.get();
 		}
 	}
 

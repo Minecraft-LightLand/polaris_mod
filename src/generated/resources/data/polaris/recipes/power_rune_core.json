@@ -1,0 +1,31 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "1B2",
+    "BAB",
+    "3B4"
+  ],
+  "key": {
+    "A": {
+      "item": "polaris:spirit_of_divinity"
+    },
+    "B": {
+      "item": "polaris:end_alloy_ingot"
+    },
+    "1": {
+      "item": "polaris:rune_core_1_activated"
+    },
+    "2": {
+      "item": "polaris:rune_core_2_activated"
+    },
+    "3": {
+      "item": "polaris:rune_core_3_activated"
+    },
+    "4": {
+      "item": "polaris:rune_core_4_activated"
+    }
+  },
+  "result": {
+    "item": "polaris:power_rune_core"
+  }
+}

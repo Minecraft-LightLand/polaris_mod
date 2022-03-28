@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "polaris:ms_base_chestplate"
+    ]
+  },
+  "criteria": {
+    "has_netherite_chestplate": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "minecraft:netherite_chestplate"
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "polaris:ms_base_chestplate"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_netherite_chestplate",
+      "has_the_recipe"
+    ]
+  ]
+}

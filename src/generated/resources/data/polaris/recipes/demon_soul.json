@@ -1,0 +1,40 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "ABC",
+    "DEF",
+    "GHI"
+  ],
+  "key": {
+    "A": {
+      "item": "minecraft:gunpowder"
+    },
+    "B": {
+      "item": "minecraft:ghast_tear"
+    },
+    "C": {
+      "item": "minecraft:phantom_membrane"
+    },
+    "D": {
+      "item": "minecraft:bone"
+    },
+    "E": {
+      "item": "minecraft:ender_pearl"
+    },
+    "F": {
+      "item": "minecraft:blaze_rod"
+    },
+    "G": {
+      "item": "minecraft:rotten_flesh"
+    },
+    "H": {
+      "item": "minecraft:slime_ball"
+    },
+    "I": {
+      "item": "minecraft:spider_eye"
+    }
+  },
+  "result": {
+    "item": "polaris:demon_soul"
+  }
+}

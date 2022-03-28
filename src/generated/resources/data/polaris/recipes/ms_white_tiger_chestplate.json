@@ -1,0 +1,28 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "ABA",
+    "ACA",
+    "EDE"
+  ],
+  "key": {
+    "B": {
+      "item": "minecraft:quartz"
+    },
+    "A": {
+      "item": "polaris:refined_netherite_ingot"
+    },
+    "C": {
+      "item": "polaris:rune_core_1_activated"
+    },
+    "E": {
+      "item": "polaris:demon_soul"
+    },
+    "D": {
+      "item": "polaris:ms_base_chestplate"
+    }
+  },
+  "result": {
+    "item": "polaris:ms_white_tiger_chestplate"
+  }
+}

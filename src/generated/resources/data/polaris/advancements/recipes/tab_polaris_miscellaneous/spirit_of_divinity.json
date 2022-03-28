@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "polaris:spirit_of_divinity"
+    ]
+  },
+  "criteria": {
+    "has_nether_star_essence": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "polaris:nether_star_essence"
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "polaris:spirit_of_divinity"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_nether_star_essence",
+      "has_the_recipe"
+    ]
+  ]
+}

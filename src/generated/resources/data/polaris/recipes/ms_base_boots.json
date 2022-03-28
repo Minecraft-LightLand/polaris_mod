@@ -1,0 +1,28 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "ABA",
+    "CDC",
+    "AEA"
+  ],
+  "key": {
+    "A": {
+      "item": "minecraft:netherite_ingot"
+    },
+    "B": {
+      "item": "polaris:life_of_seeds"
+    },
+    "C": {
+      "item": "polaris:demon_soul"
+    },
+    "E": {
+      "item": "polaris:flame_of_the_soul"
+    },
+    "D": {
+      "item": "minecraft:netherite_boots"
+    }
+  },
+  "result": {
+    "item": "polaris:ms_base_boots"
+  }
+}

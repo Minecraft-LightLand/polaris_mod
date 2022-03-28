@@ -1,0 +1,31 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " A ",
+    "BCD",
+    "EFE"
+  ],
+  "key": {
+    "A": {
+      "item": "minecraft:ghast_tear"
+    },
+    "B": {
+      "item": "minecraft:ender_eye"
+    },
+    "C": {
+      "item": "minecraft:soul_sand"
+    },
+    "D": {
+      "item": "minecraft:nether_wart"
+    },
+    "E": {
+      "item": "minecraft:lava_bucket"
+    },
+    "F": {
+      "item": "minecraft:blaze_powder"
+    }
+  },
+  "result": {
+    "item": "polaris:flame_of_the_soul"
+  }
+}

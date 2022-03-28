@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "CBC",
+    "BAB",
+    "DBD"
+  ],
+  "key": {
+    "A": {
+      "item": "polaris:life_of_seeds"
+    },
+    "B": {
+      "item": "polaris:nether_star_essence"
+    },
+    "C": {
+      "item": "polaris:flame_of_the_soul"
+    },
+    "D": {
+      "item": "polaris:crying_ghost"
+    }
+  },
+  "result": {
+    "item": "polaris:spirit_of_divinity"
+  }
+}

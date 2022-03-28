@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "polaris:ms_white_tiger_helmet"
+    ]
+  },
+  "criteria": {
+    "has_ms_base_helmet": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "polaris:ms_base_helmet"
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "polaris:ms_white_tiger_helmet"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_ms_base_helmet",
+      "has_the_recipe"
+    ]
+  ]
+}

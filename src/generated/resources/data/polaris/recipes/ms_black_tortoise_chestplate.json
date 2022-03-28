@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "AAA",
+    "ACA",
+    "EDE"
+  ],
+  "key": {
+    "A": {
+      "item": "polaris:refined_netherite_ingot"
+    },
+    "C": {
+      "item": "polaris:rune_core_1_activated"
+    },
+    "E": {
+      "item": "polaris:purgatory_soil"
+    },
+    "D": {
+      "item": "polaris:ms_base_chestplate"
+    }
+  },
+  "result": {
+    "item": "polaris:ms_black_tortoise_chestplate"
+  }
+}
