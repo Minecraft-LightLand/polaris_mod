@@ -12,6 +12,7 @@ import dev.lcy0x1.base.block.impl.LitBlockMethodImpl;
 import dev.lcy0x1.base.block.impl.TitleEntityBlockMethodImpl;
 import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
+import net.minecraft.block.Blocks;
 import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
 import net.minecraft.state.properties.BlockStateProperties;
@@ -35,8 +36,7 @@ public class PolarisBlocks {
 
 	static {
 		Polaris.REGISTRATE.itemGroup(() -> PolarisItemGroup.TAB_POLARIS_BLOCKS);
-		LightLandBlockProperties prop = new LightLandBlockProperties(AbstractBlock.Properties.of(Material.STONE)
-				.requiresCorrectToolForDrops().sound(SoundType.STONE).harvestTool(ToolType.PICKAXE).harvestLevel(2));
+		LightLandBlockProperties prop = new LightLandBlockProperties(AbstractBlock.Properties.copy(Blocks.NETHERITE_BLOCK));
 
 		ALLOY_SMITHING_TABLE = Polaris.REGISTRATE.block("alloy_smithing_table",
 						p -> LightLandBlock.newBaseBlock(prop, BlockProxy.HORIZONTAL,

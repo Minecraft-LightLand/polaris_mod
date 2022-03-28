@@ -47,5 +47,8 @@ public class EternalFurnaceTile extends AbstractFurnaceTileEntity {
 		}
 	}
 
-
+	@Override
+	protected int getTotalCookTime() {
+		return super.getTotalCookTime() / 2;
+	}
 }
