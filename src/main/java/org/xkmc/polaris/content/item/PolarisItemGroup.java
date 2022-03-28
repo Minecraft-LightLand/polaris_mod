@@ -12,7 +12,7 @@ public class PolarisItemGroup {
 		TAB_POLARIS_MISCELLANEOUS = new ItemGroup("tab_polaris_miscellaneous") {
 			@Override
 			public ItemStack makeIcon() {
-				return new ItemStack(PolarisItems.HEART_OF_ORE.get());
+				return new ItemStack(PolarisItems.SimpleItem.HEART_OF_ORE.entry.get());
 			}
 		};
 	}

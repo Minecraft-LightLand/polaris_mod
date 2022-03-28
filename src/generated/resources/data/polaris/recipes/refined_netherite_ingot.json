@@ -7,13 +7,13 @@
   ],
   "key": {
     "A": {
-      "item": "minecraft:furnace"
+      "item": "minecraft:iron_ingot"
     },
     "B": {
-      "item": "minecraft:netherite_block"
+      "item": "polaris:netherite_essence"
     }
   },
   "result": {
-    "item": "polaris:obsidian_nether_furnace"
+    "item": "polaris:refined_netherite_ingot"
   }
 }

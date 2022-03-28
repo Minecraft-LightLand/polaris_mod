@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:item/generated",
   "textures": {
-    "layer0": "polaris:item/nether_alloy_essence"
+    "layer0": "polaris:item/netherite_essence"
   }
 }

@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:item/generated",
   "textures": {
-    "layer0": "polaris:item/end_essence"
+    "layer0": "polaris:item/refined_netherite_ingot"
   }
 }

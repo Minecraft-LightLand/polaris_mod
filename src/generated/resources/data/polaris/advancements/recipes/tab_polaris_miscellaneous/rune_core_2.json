@@ -2,16 +2,16 @@
   "parent": "minecraft:recipes/root",
   "rewards": {
     "recipes": [
-      "polaris:obsidian_nether_furnace"
+      "polaris:rune_core_2"
     ]
   },
   "criteria": {
-    "has_furnace": {
+    "has_rune_core_1_activated": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
           {
-            "item": "minecraft:furnace"
+            "item": "polaris:rune_core_1_activated"
           }
         ]
       }
@@ -19,13 +19,13 @@
     "has_the_recipe": {
       "trigger": "minecraft:recipe_unlocked",
       "conditions": {
-        "recipe": "polaris:obsidian_nether_furnace"
+        "recipe": "polaris:rune_core_2"
       }
     }
   },
   "requirements": [
     [
-      "has_furnace",
+      "has_rune_core_1_activated",
       "has_the_recipe"
     ]
   ]

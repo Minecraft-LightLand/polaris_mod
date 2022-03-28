@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "CBC",
+    "BAB",
+    "CBC"
+  ],
+  "key": {
+    "A": {
+      "item": "polaris:crying_ghost"
+    },
+    "B": {
+      "item": "minecraft:nether_star"
+    },
+    "C": {
+      "item": "polaris:flame_of_the_soul"
+    }
+  },
+  "result": {
+    "item": "polaris:nether_star"
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "CBC",
+    "BAB",
+    "CBC"
+  ],
+  "key": {
+    "A": {
+      "item": "polaris:rune_core_1_activated"
+    },
+    "B": {
+      "item": "minecraft:netherite_scrap"
+    },
+    "C": {
+      "item": "polaris:flame_of_the_soul"
+    }
+  },
+  "result": {
+    "item": "polaris:rune_core_2"
+  }
+}

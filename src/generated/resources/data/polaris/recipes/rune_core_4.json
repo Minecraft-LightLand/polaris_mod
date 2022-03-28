@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "CBC",
+    "BAB",
+    "CBC"
+  ],
+  "key": {
+    "A": {
+      "item": "polaris:rune_core_3_activated"
+    },
+    "B": {
+      "item": "polaris:refined_netherite_ingot"
+    },
+    "C": {
+      "item": "polaris:demon_soul"
+    }
+  },
+  "result": {
+    "item": "polaris:rune_core_4"
+  }
+}

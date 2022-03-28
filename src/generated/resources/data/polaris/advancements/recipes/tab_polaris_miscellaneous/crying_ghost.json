@@ -2,16 +2,16 @@
   "parent": "minecraft:recipes/root",
   "rewards": {
     "recipes": [
-      "polaris:obsidian_nether_furnace"
+      "polaris:crying_ghost"
     ]
   },
   "criteria": {
-    "has_furnace": {
+    "has_ghast_tear": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
           {
-            "item": "minecraft:furnace"
+            "item": "minecraft:ghast_tear"
           }
         ]
       }
@@ -19,13 +19,13 @@
     "has_the_recipe": {
       "trigger": "minecraft:recipe_unlocked",
       "conditions": {
-        "recipe": "polaris:obsidian_nether_furnace"
+        "recipe": "polaris:crying_ghost"
       }
     }
   },
   "requirements": [
     [
-      "has_furnace",
+      "has_ghast_tear",
       "has_the_recipe"
     ]
   ]

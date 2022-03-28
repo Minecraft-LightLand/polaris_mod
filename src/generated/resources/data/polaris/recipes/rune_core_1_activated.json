@@ -1,0 +1,9 @@
+{
+  "type": "polaris:obsidian_furnace",
+  "ingredient": {
+    "item": "polaris:rune_core_1"
+  },
+  "result": "polaris:rune_core_1_activated",
+  "experience": 0.1,
+  "cookingtime": 14400
+}

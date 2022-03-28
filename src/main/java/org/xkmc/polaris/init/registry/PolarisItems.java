@@ -21,17 +21,17 @@ public class PolarisItems {
 	public enum SimpleItem {
 		PURGATORY_SOIL,
 		DEMON_SOUL,
-		NETHER_STAR,
-		NETHER_STAR_ESSENCE,
-		END_ALLOY_INGOT,
-		END_ESSENCE,
-		NETHER_ALLOY_INGOT_ESSENCE,
-		NETHER_ALLOY_ESSENCE,
 		THE_VOID_OF_SOURCE,
 		FLAME_OF_THE_SOUL,
 		SPIRIT_OF_DIVINITY,
 		LIFE_OF_SEEDS,
 		CRYING_GHOST,
+		NETHER_STAR,
+		NETHER_STAR_ESSENCE,
+		NETHERITE_ESSENCE,
+		REFINED_NETHERITE_INGOT,
+		REFINED_NETHERITE_ESSENCE,
+		END_ALLOY_INGOT,
 		EMPTY_RUNE_CORE,
 		RUNE_CORE_1,
 		RUNE_CORE_2,
@@ -42,7 +42,9 @@ public class PolarisItems {
 		RUNE_CORE_2_ACTIVATED,
 		RUNE_CORE_3_ACTIVATED,
 		RUNE_CORE_4_ACTIVATED,
-		POWER_RUNE_CORE_ACTIVATED;
+		POWER_RUNE_CORE_ACTIVATED,
+		HEART_OF_ORE,
+		THE_SOIL_OF_EVERYTHING;
 
 		public final ItemEntry<Item> entry;
 
@@ -79,10 +81,6 @@ public class PolarisItems {
 		}
 	}
 
-	public static final ItemEntry<Item>
-			HEART_OF_ORE,
-			THE_SOIL_OF_EVERYTHING;
-
 	public static final ItemEntry<Item>[] STAR_COIN;
 	public static final ItemEntry<PolarisArmors>[][] ARMORS;
 
@@ -90,13 +88,6 @@ public class PolarisItems {
 		Polaris.REGISTRATE.itemGroup(() -> PolarisItemGroup.TAB_POLARIS_MISCELLANEOUS);
 		SimpleItem.register();
 		RuneCoreItem.register();
-		{
-			HEART_OF_ORE = Polaris.REGISTRATE.item("heart_of_ore", p -> new Item(p.durability(300)))
-					.defaultModel().defaultLang().register();
-			THE_SOIL_OF_EVERYTHING = Polaris.REGISTRATE.item("the_soil_of_everything", p -> new Item(p.durability(500)))
-					.defaultModel().defaultLang().register();
-
-		}
 		{
 			int n = 8;
 			STAR_COIN = new ItemEntry[n];

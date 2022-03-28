@@ -2,16 +2,16 @@
   "parent": "minecraft:recipes/root",
   "rewards": {
     "recipes": [
-      "polaris:end_essence"
+      "polaris:nether_star"
     ]
   },
   "criteria": {
-    "has_end_alloy_ingot": {
+    "has_crying_ghost": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
           {
-            "item": "polaris:end_alloy_ingot"
+            "item": "polaris:crying_ghost"
           }
         ]
       }
@@ -19,13 +19,13 @@
     "has_the_recipe": {
       "trigger": "minecraft:recipe_unlocked",
       "conditions": {
-        "recipe": "polaris:end_essence"
+        "recipe": "polaris:nether_star"
       }
     }
   },
   "requirements": [
     [
-      "has_end_alloy_ingot",
+      "has_crying_ghost",
       "has_the_recipe"
     ]
   ]

@@ -2,16 +2,16 @@
   "parent": "minecraft:recipes/root",
   "rewards": {
     "recipes": [
-      "polaris:obsidian_nether_furnace"
+      "polaris:netherite_essence"
     ]
   },
   "criteria": {
-    "has_furnace": {
+    "has_netherite_ingot": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
           {
-            "item": "minecraft:furnace"
+            "item": "minecraft:netherite_ingot"
           }
         ]
       }
@@ -19,13 +19,13 @@
     "has_the_recipe": {
       "trigger": "minecraft:recipe_unlocked",
       "conditions": {
-        "recipe": "polaris:obsidian_nether_furnace"
+        "recipe": "polaris:netherite_essence"
       }
     }
   },
   "requirements": [
     [
-      "has_furnace",
+      "has_netherite_ingot",
       "has_the_recipe"
     ]
   ]

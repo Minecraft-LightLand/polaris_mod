@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "CBC",
+    "BAB",
+    "CBC"
+  ],
+  "key": {
+    "A": {
+      "item": "polaris:refined_netherite_essence"
+    },
+    "B": {
+      "item": "polaris:crying_ghost"
+    },
+    "C": {
+      "item": "polaris:flame_of_the_soul"
+    }
+  },
+  "result": {
+    "item": "polaris:the_void_of_source"
+  }
+}
