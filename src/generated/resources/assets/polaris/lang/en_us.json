@@ -94,5 +94,9 @@
   "item.polaris.supreme_genesis_white_helmet": "Supreme Genesis White Helmet",
   "item.polaris.supreme_genesis_white_leggings": "Supreme Genesis White Leggings",
   "item.polaris.the_soil_of_everything": "The Soil Of Everything",
-  "item.polaris.the_void_of_source": "The Void Of Source"
+  "item.polaris.the_void_of_source": "The Void Of Source",
+  "polaris.advancement.starlord.text": "Equip full star load armor",
+  "polaris.advancement.starlord.title": "I'm the star load",
+  "polaris.advancement.supreme.text": "Equip full supreme genesis armor",
+  "polaris.advancement.supreme.title": "I'm the god"
 }

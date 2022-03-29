@@ -1,0 +1,45 @@
+{
+  "display": {
+    "icon": {
+      "item": "polaris:star_lord_chestplate",
+      "nbt": "{Damage:0}"
+    },
+    "title": {
+      "translate": "polaris.advancement.starlord.title"
+    },
+    "description": {
+      "translate": "polaris.advancement.starlord.text"
+    },
+    "frame": "goal",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false,
+    "background": "polaris:textures/gui/advancements/backgrounds/netherite_block.png"
+  },
+  "criteria": {
+    "equip_star_lord": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "polaris:star_lord_helmet"
+          },
+          {
+            "item": "polaris:star_lord_chestplate"
+          },
+          {
+            "item": "polaris:star_lord_leggings"
+          },
+          {
+            "item": "polaris:star_lord_boots"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "equip_star_lord"
+    ]
+  ]
+}

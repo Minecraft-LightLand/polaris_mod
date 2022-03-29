@@ -1,0 +1,46 @@
+{
+  "parent": "polaris:star_lord",
+  "display": {
+    "icon": {
+      "item": "polaris:supreme_genesis_chestplate",
+      "nbt": "{Damage:0}"
+    },
+    "title": {
+      "translate": "polaris.advancement.supreme.title"
+    },
+    "description": {
+      "translate": "polaris.advancement.supreme.text"
+    },
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false,
+    "background": "polaris:textures/gui/advancements/backgrounds/netherite_block.png"
+  },
+  "criteria": {
+    "equip_supreme_genesis": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "polaris:supreme_genesis_helmet"
+          },
+          {
+            "item": "polaris:supreme_genesis_chestplate"
+          },
+          {
+            "item": "polaris:supreme_genesis_leggings"
+          },
+          {
+            "item": "polaris:supreme_genesis_boots"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "equip_supreme_genesis"
+    ]
+  ]
+}
