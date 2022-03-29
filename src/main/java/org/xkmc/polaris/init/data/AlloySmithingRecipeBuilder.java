@@ -30,7 +30,7 @@ public class AlloySmithingRecipeBuilder extends ShapedRecipeBuilder {
 		this.advancement.parent(new ResourceLocation("recipes/root"))
 				.addCriterion("has_the_recipe", RecipeUnlockedTrigger.unlocked(id))
 				.rewards(AdvancementRewards.Builder.recipe(id)).requirements(IRequirementsStrategy.OR);
-		pvd.accept(new ShapedRecipeBuilder.Result(id, this.result, this.count, this.group == null ? "" : this.group,
+		pvd.accept(new Result(id, this.result, this.count, this.group == null ? "" : this.group,
 				this.rows, this.key, this.advancement, new ResourceLocation(id.getNamespace(),
 				"recipes/" + this.result.getItemCategory().getRecipeFolderName() + "/" + id.getPath())));
 	}

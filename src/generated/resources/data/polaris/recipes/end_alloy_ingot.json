@@ -1,5 +1,5 @@
 {
-  "type": "minecraft:crafting_shaped",
+  "type": "polaris:alloy_smithing",
   "pattern": [
     " B ",
     "BAB",
