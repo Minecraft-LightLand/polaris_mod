@@ -6,12 +6,12 @@
     ]
   },
   "criteria": {
-    "has_blaze_powder": {
+    "has_ghast_tear": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
           {
-            "item": "minecraft:blaze_powder"
+            "item": "minecraft:ghast_tear"
           }
         ]
       }
@@ -25,7 +25,7 @@
   },
   "requirements": [
     [
-      "has_blaze_powder",
+      "has_ghast_tear",
       "has_the_recipe"
     ]
   ]

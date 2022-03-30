@@ -2,16 +2,16 @@
   "parent": "minecraft:recipes/root",
   "rewards": {
     "recipes": [
-      "polaris:rune_core_1"
+      "minecraft:spawner"
     ]
   },
   "criteria": {
-    "has_empty_rune_core": {
+    "has_knowledge": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
           {
-            "item": "polaris:empty_rune_core"
+            "item": "polaris:knowledge"
           }
         ]
       }
@@ -19,13 +19,13 @@
     "has_the_recipe": {
       "trigger": "minecraft:recipe_unlocked",
       "conditions": {
-        "recipe": "polaris:rune_core_1"
+        "recipe": "minecraft:spawner"
       }
     }
   },
   "requirements": [
     [
-      "has_empty_rune_core",
+      "has_knowledge",
       "has_the_recipe"
     ]
   ]

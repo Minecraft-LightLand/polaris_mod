@@ -2,16 +2,16 @@
   "parent": "minecraft:recipes/root",
   "rewards": {
     "recipes": [
-      "polaris:rune_core_1"
+      "polaris:empty_rune_core"
     ]
   },
   "criteria": {
-    "has_empty_rune_core": {
+    "has_netherite_essence": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
           {
-            "item": "polaris:empty_rune_core"
+            "item": "polaris:netherite_essence"
           }
         ]
       }
@@ -19,13 +19,13 @@
     "has_the_recipe": {
       "trigger": "minecraft:recipe_unlocked",
       "conditions": {
-        "recipe": "polaris:rune_core_1"
+        "recipe": "polaris:empty_rune_core"
       }
     }
   },
   "requirements": [
     [
-      "has_empty_rune_core",
+      "has_netherite_essence",
       "has_the_recipe"
     ]
   ]

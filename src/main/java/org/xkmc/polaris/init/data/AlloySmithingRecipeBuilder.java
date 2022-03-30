@@ -9,6 +9,7 @@ import net.minecraft.advancements.criterion.RecipeUnlockedTrigger;
 import net.minecraft.data.IFinishedRecipe;
 import net.minecraft.data.ShapedRecipeBuilder;
 import net.minecraft.item.Item;
+import net.minecraft.item.ItemGroup;
 import net.minecraft.item.crafting.IRecipeSerializer;
 import net.minecraft.item.crafting.Ingredient;
 import net.minecraft.util.IItemProvider;
@@ -30,9 +31,11 @@ public class AlloySmithingRecipeBuilder extends ShapedRecipeBuilder {
 		this.advancement.parent(new ResourceLocation("recipes/root"))
 				.addCriterion("has_the_recipe", RecipeUnlockedTrigger.unlocked(id))
 				.rewards(AdvancementRewards.Builder.recipe(id)).requirements(IRequirementsStrategy.OR);
+		ItemGroup group = this.result.getItemCategory();
+		String folder = (group == null ? "nil" : group.getRecipeFolderName()) + "/";
 		pvd.accept(new Result(id, this.result, this.count, this.group == null ? "" : this.group,
 				this.rows, this.key, this.advancement, new ResourceLocation(id.getNamespace(),
-				"recipes/" + this.result.getItemCategory().getRecipeFolderName() + "/" + id.getPath())));
+				"recipes/" + folder + id.getPath())));
 	}
 
 

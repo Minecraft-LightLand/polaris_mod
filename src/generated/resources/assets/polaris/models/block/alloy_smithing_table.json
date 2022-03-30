@@ -3,10 +3,10 @@
   "textures": {
     "down": "polaris:block/alloy_smithing_table_bottom",
     "up": "polaris:block/alloy_smithing_table_top",
-    "north": "polaris:block/alloy_smithing_table_0",
-    "south": "polaris:block/alloy_smithing_table_1",
-    "east": "polaris:block/alloy_smithing_table_2",
-    "west": "polaris:block/alloy_smithing_table_3",
+    "north": "polaris:block/alloy_smithing_table_front",
+    "south": "polaris:block/alloy_smithing_table_side",
+    "east": "polaris:block/alloy_smithing_table_side",
+    "west": "polaris:block/alloy_smithing_table_side",
     "particle": "polaris:block/alloy_smithing_table_top"
   }
 }

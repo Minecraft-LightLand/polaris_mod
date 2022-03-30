@@ -39,7 +39,7 @@ public class PolarisBlocks {
 						p -> LightLandBlock.newBaseBlock(prop, BlockProxy.HORIZONTAL,
 								new ContainerBlockMethodImpl<>("container.polaris.alloy_smithing_table_container", AlloySmithingTableContainer::new)))
 				.blockstate((ctx, pvd) -> pvd.horizontalBlock(ctx.getEntry(),
-						six_side(ctx, pvd, "alloy_smithing_table")))
+						four_side(ctx, pvd, "alloy_smithing_table", "_front", "")))
 				.defaultLang().defaultLoot().simpleItem().register();
 
 		OBSIDIAN_NETHER_FURNACE = Polaris.REGISTRATE.block("obsidian_nether_furnace",
@@ -56,8 +56,8 @@ public class PolarisBlocks {
 						p -> LightLandBlock.newBaseBlock(prop, BlockProxy.HORIZONTAL, new LitBlockMethodImpl(13),
 								new TitleEntityBlockMethodImpl(() -> PolarisBlocks.ETERNAL_FURNACE_TILE)))
 				.blockstate((ctx, pvd) -> {
-							ModelFile off = four_side(ctx, pvd, "eternal_furnace", "_front", "");
-							ModelFile on = four_side(ctx, pvd, "eternal_furnace", "_on", "_on");
+							ModelFile off = six_side(ctx, pvd, "eternal_furnace", "", "_front", "_back", "_side", "_side");
+							ModelFile on = six_side(ctx, pvd, "eternal_furnace", "_on", "_on", "_back", "_side", "_side");
 							pvd.horizontalBlock(ctx.getEntry(), state -> state.getValue(BlockStateProperties.LIT) ? on : off);
 						}
 				).defaultLang().defaultLoot().simpleItem().register();
@@ -85,14 +85,14 @@ public class PolarisBlocks {
 				.texture("particle", blockTex(base + "_top"));
 	}
 
-	private static ModelFile six_side(DataGenContext<Block, LightLandBlock> ctx, RegistrateBlockstateProvider pvd, String base) {
-		return pvd.models().cube(ctx.getName(),
+	private static ModelFile six_side(DataGenContext<Block, LightLandBlock> ctx, RegistrateBlockstateProvider pvd, String base, String sufx, String north, String south, String east, String west) {
+		return pvd.models().cube(ctx.getName() + sufx,
 						blockTex(base + "_bottom"),
 						blockTex(base + "_top"),
-						blockTex(base + "_0"),
-						blockTex(base + "_1"),
-						blockTex(base + "_2"),
-						blockTex(base + "_3"))
+						blockTex(base + north),
+						blockTex(base + south),
+						blockTex(base + east),
+						blockTex(base + west))
 				.texture("particle", blockTex(base + "_top"));
 	}
 

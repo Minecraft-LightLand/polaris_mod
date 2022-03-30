@@ -7,16 +7,16 @@
   ],
   "key": {
     "A": {
-      "item": "minecraft:furnace"
+      "item": "polaris:knowledge"
     },
     "B": {
-      "item": "minecraft:gold_ingot"
+      "item": "polaris:the_soil_of_everything"
     },
     "C": {
-      "item": "minecraft:netherite_ingot"
+      "item": "polaris:purgatory_soil"
     }
   },
   "result": {
-    "item": "polaris:obsidian_nether_furnace"
+    "item": "minecraft:spawner"
   }
 }

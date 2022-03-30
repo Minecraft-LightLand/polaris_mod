@@ -2,16 +2,16 @@
   "parent": "minecraft:recipes/root",
   "rewards": {
     "recipes": [
-      "polaris:rune_core_1"
+      "polaris:eternal_furnace"
     ]
   },
   "criteria": {
-    "has_empty_rune_core": {
+    "has_furnace": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
           {
-            "item": "polaris:empty_rune_core"
+            "item": "minecraft:furnace"
           }
         ]
       }
@@ -19,13 +19,13 @@
     "has_the_recipe": {
       "trigger": "minecraft:recipe_unlocked",
       "conditions": {
-        "recipe": "polaris:rune_core_1"
+        "recipe": "polaris:eternal_furnace"
       }
     }
   },
   "requirements": [
     [
-      "has_empty_rune_core",
+      "has_furnace",
       "has_the_recipe"
     ]
   ]

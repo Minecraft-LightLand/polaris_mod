@@ -7,13 +7,13 @@
   ],
   "key": {
     "A": {
-      "item": "minecraft:ghast_tear"
+      "item": "polaris:netherite_essence"
     },
     "B": {
-      "item": "minecraft:blaze_powder"
+      "item": "minecraft:netherite_scrap"
     }
   },
   "result": {
-    "item": "polaris:flame_of_the_soul"
+    "item": "polaris:empty_rune_core"
   }
 }

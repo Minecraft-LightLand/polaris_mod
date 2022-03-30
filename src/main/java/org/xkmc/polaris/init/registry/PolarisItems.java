@@ -7,10 +7,7 @@ import net.minecraft.inventory.EquipmentSlotType;
 import net.minecraft.item.Item;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.client.model.generators.ModelFile;
-import org.xkmc.polaris.content.item.ActivatableItem;
-import org.xkmc.polaris.content.item.PolarisArmorMaterial;
-import org.xkmc.polaris.content.item.PolarisArmors;
-import org.xkmc.polaris.content.item.PolarisItemGroup;
+import org.xkmc.polaris.content.item.*;
 import org.xkmc.polaris.init.Polaris;
 
 import java.util.Locale;
@@ -34,7 +31,6 @@ public class PolarisItems {
 		END_ALLOY_INGOT,
 		NETHER_STAR,
 		NETHER_STAR_ESSENCE,
-		KNOWLEDGE,
 		EMPTY_RUNE_CORE,
 		RUNE_CORE_1,
 		RUNE_CORE_2,
@@ -82,12 +78,15 @@ public class PolarisItems {
 		}
 	}
 
+	public static final ItemEntry<KnowledgeItem> KNOWLEDGE;
+
 	public static final ItemEntry<Item>[] STAR_COIN;
 	public static final ItemEntry<PolarisArmors>[][] ARMORS;
 
 	static {
 		Polaris.REGISTRATE.itemGroup(() -> PolarisItemGroup.TAB_POLARIS_MISCELLANEOUS);
 		SimpleItem.register();
+		KNOWLEDGE = Polaris.REGISTRATE.item("knowledge", p -> new KnowledgeItem(p.stacksTo(1))).defaultLang().defaultModel().register();
 		RuneCoreItem.register();
 		{
 			int n = 8;

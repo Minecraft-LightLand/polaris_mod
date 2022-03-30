@@ -1,0 +1,25 @@
+{
+  "type": "polaris:alloy_smithing",
+  "pattern": [
+    "ABA",
+    "BCB",
+    "ADA"
+  ],
+  "key": {
+    "A": {
+      "item": "minecraft:gold_ingot"
+    },
+    "B": {
+      "item": "minecraft:netherite_ingot"
+    },
+    "C": {
+      "item": "minecraft:furnace"
+    },
+    "D": {
+      "item": "minecraft:nether_star"
+    }
+  },
+  "result": {
+    "item": "polaris:eternal_furnace"
+  }
+}
