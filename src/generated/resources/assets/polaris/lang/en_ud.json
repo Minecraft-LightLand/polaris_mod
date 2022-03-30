@@ -16,6 +16,7 @@
   "item.polaris.end_essence": "\u01DD\u0254u\u01DDss\u018E pu\u018E",
   "item.polaris.flame_of_the_soul": "\u05DFnoS \u01DD\u0265\u27D8 \u025FO \u01DD\u026F\u0250\u05DF\u2132",
   "item.polaris.heart_of_ore": "\u01DD\u0279O \u025FO \u0287\u0279\u0250\u01DDH",
+  "item.polaris.knowledge": "\u01DDbp\u01DD\u05DF\u028Dou\u029E",
   "item.polaris.life_of_seeds": "sp\u01DD\u01DDS \u025FO \u01DD\u025F\u0131\uA780",
   "item.polaris.little_cat_blue_boots": "s\u0287oo\u15FA \u01DDn\u05DF\u15FA \u0287\u0250\u0186 \u01DD\u05DF\u0287\u0287\u0131\uA780",
   "item.polaris.little_cat_blue_chestplate": "\u01DD\u0287\u0250\u05DFd\u0287s\u01DD\u0265\u0186 \u01DDn\u05DF\u15FA \u0287\u0250\u0186 \u01DD\u05DF\u0287\u0287\u0131\uA780",
@@ -98,5 +99,8 @@
   "polaris.advancement.starlord.text": "\u0279o\u026F\u0279\u0250 p\u0250o\u05DF \u0279\u0250\u0287s \u05DF\u05DFn\u025F d\u0131nb\u018E",
   "polaris.advancement.starlord.title": "p\u0250o\u05DF \u0279\u0250\u0287s \u01DD\u0265\u0287 \u026F,I",
   "polaris.advancement.supreme.text": "\u0279o\u026F\u0279\u0250 s\u0131s\u01DDu\u01DDb \u01DD\u026F\u01DD\u0279dns \u05DF\u05DFn\u025F d\u0131nb\u018E",
-  "polaris.advancement.supreme.title": "pob \u01DD\u0265\u0287 \u026F,I"
+  "polaris.advancement.supreme.title": "pob \u01DD\u0265\u0287 \u026F,I",
+  "polaris.tooltip.armor.extra": ":\u0287\u01DDs \u05DF\u05DFn\u025F d\u0131nb\u01DD u\u01DD\u0265M",
+  "polaris.tooltip.armor.fly": "\u028E\u05DF\u025F \u01DD\u028C\u0131\u0287\u0250\u01DD\u0279\u0254 \u01DD\u05DFq\u0250u\u018E",
+  "polaris.tooltip.armor.home": "p\u0131o\u028C \u01DD\u0265\u0287 u\u0131 p\u01DDddo\u0279p u\u01DD\u0265\u028D \u01DD\u026Fo\u0265 u\u0279n\u0287\u01DD\u1D1A"
 }

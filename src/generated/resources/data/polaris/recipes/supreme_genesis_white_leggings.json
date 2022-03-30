@@ -1,0 +1,25 @@
+{
+  "type": "polaris:alloy_smithing",
+  "pattern": [
+    "BCB",
+    "A1A",
+    "BCB"
+  ],
+  "key": {
+    "A": {
+      "item": "polaris:spirit_of_divinity"
+    },
+    "B": {
+      "item": "polaris:knowledge"
+    },
+    "C": {
+      "item": "polaris:power_rune_core_activated"
+    },
+    "1": {
+      "item": "polaris:supreme_genesis_leggings"
+    }
+  },
+  "result": {
+    "item": "polaris:supreme_genesis_white_leggings"
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "type": "polaris:alloy_smithing",
+  "pattern": [
+    "ABC",
+    "DEF",
+    "GHI"
+  ],
+  "key": {
+    "A": {
+      "item": "minecraft:infested_stone"
+    },
+    "B": {
+      "item": "minecraft:trident"
+    },
+    "C": {
+      "item": "minecraft:gilded_blackstone"
+    },
+    "D": {
+      "item": "minecraft:dragon_head"
+    },
+    "F": {
+      "item": "minecraft:creeper_head"
+    },
+    "G": {
+      "item": "minecraft:sponge"
+    },
+    "H": {
+      "item": "minecraft:turtle_egg"
+    },
+    "I": {
+      "item": "minecraft:respawn_anchor"
+    },
+    "E": {
+      "item": "polaris:spirit_of_divinity"
+    }
+  },
+  "result": {
+    "item": "polaris:knowledge"
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "polaris:knowledge"
+    ]
+  },
+  "criteria": {
+    "has_gilded_blackstone": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "minecraft:gilded_blackstone"
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "polaris:knowledge"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_gilded_blackstone",
+      "has_the_recipe"
+    ]
+  ]
+}

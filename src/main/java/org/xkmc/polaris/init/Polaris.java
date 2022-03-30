@@ -16,10 +16,7 @@ import org.xkmc.polaris.event.PolarisGeneralEventHandler;
 import org.xkmc.polaris.init.data.AdvancementGen;
 import org.xkmc.polaris.init.data.LangData;
 import org.xkmc.polaris.init.data.RecipeGen;
-import org.xkmc.polaris.init.registry.PolarisBlocks;
-import org.xkmc.polaris.init.registry.PolarisContainers;
-import org.xkmc.polaris.init.registry.PolarisItems;
-import org.xkmc.polaris.init.registry.PolarisRecipeTypes;
+import org.xkmc.polaris.init.registry.*;
 
 @Mod(Polaris.MODID)
 public class Polaris {
@@ -35,6 +32,7 @@ public class Polaris {
 		PolarisBlocks.register();
 		PolarisContainers.register();
 		PolarisRecipeTypes.register();
+		PolarisMagic.register();
 		Polaris.REGISTRATE.addDataGenerator(ProviderType.LANG, LangData::genLang);
 		Polaris.REGISTRATE.addDataGenerator(ProviderType.RECIPE, RecipeGen::genRecipe);
 		Polaris.REGISTRATE.addDataGenerator(ProviderType.ADVANCEMENT, AdvancementGen::genAdvancement);

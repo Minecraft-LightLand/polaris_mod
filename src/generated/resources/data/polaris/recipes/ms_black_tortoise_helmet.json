@@ -1,11 +1,14 @@
 {
   "type": "polaris:alloy_smithing",
   "pattern": [
-    "AAA",
+    "ABA",
     "ACA",
     "EDE"
   ],
   "key": {
+    "B": {
+      "item": "minecraft:turtle_helmet"
+    },
     "A": {
       "item": "polaris:refined_netherite_ingot"
     },
@@ -13,7 +16,7 @@
       "item": "polaris:rune_core_1_activated"
     },
     "E": {
-      "item": "polaris:purgatory_soil"
+      "item": "polaris:the_soil_of_everything"
     },
     "D": {
       "item": "polaris:ms_base_helmet"

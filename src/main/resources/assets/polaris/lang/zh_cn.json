@@ -102,5 +102,10 @@
   "container.polaris.cost": "合成费用: %s",
   "itemGroup.tab_polaris_armors": "北极星 - 盔甲",
   "itemGroup.tab_polaris_blocks": "北极星 - 方块",
-  "itemGroup.tab_polaris_miscellaneous": "北极星 - 杂项"
+  "itemGroup.tab_polaris_miscellaneous": "北极星 - 杂项",
+  "polaris.tooltip.armor.extra": "当装备全套盔甲时:",
+  "polaris.tooltip.armor.fly": "启用创造飞行",
+  "polaris.tooltip.armor.home": "坠入虚空时传送回出生点",
+  "item.polaris.knowledge": "贤者之石",
+  "effect.polaris.knowledge": "贤者"
 }

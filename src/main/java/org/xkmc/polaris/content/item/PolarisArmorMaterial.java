@@ -11,7 +11,9 @@ import net.minecraft.util.SoundEvent;
 import net.minecraft.util.SoundEvents;
 import org.xkmc.polaris.init.Polaris;
 import org.xkmc.polaris.init.registry.PolarisItems;
+import org.xkmc.polaris.init.registry.PolarisMagic;
 
+import java.util.Arrays;
 import java.util.function.Supplier;
 
 public enum PolarisArmorMaterial implements IArmorMaterial {
@@ -72,10 +74,7 @@ public enum PolarisArmorMaterial implements IArmorMaterial {
 			SoundEvents.ARMOR_EQUIP_NETHERITE, 7.0F, 0.25F,
 			() -> Ingredient.of(PolarisItems.SimpleItem.SPIRIT_OF_DIVINITY.entry.get()),
 			10, true, true,
-			get(Effects.DAMAGE_RESISTANCE, 1),
-			get(Effects.DIG_SPEED, 1),
-			get(Effects.DAMAGE_BOOST, 1),
-			get(Effects.CONDUIT_POWER, 0),
+			get(PolarisMagic.PERSISTENT::get, 0),
 			get(Effects.LUCK, 0)),
 	EMPERORS_NEW_CLOTHES("emperors_new_clothes", 2000, new int[]{4, 8, 6, 4}, 15,
 			SoundEvents.ARMOR_EQUIP_NETHERITE, 3.0F, 0.1F,
@@ -106,11 +105,11 @@ public enum PolarisArmorMaterial implements IArmorMaterial {
 
 	public final int health;
 	public final boolean fly, home;
-	public final EffectInstance[] ins;
+	public final LazyValue<EffectInstance[]> ins;
 
 	PolarisArmorMaterial(String name, int durability, int[] prot, int ench, SoundEvent sound, float toughness,
 						 float kbRes, Supplier<Ingredient> repair,
-						 int health, boolean fly, boolean home, EffectInstance... ins) {
+						 int health, boolean fly, boolean home, Supplier<EffectInstance>... ins) {
 		this.name = name;
 		this.durability = durability;
 		this.prot = prot;
@@ -123,7 +122,7 @@ public enum PolarisArmorMaterial implements IArmorMaterial {
 		this.health = health;
 		this.fly = fly;
 		this.home = home;
-		this.ins = ins;
+		this.ins = new LazyValue<>(() -> Arrays.stream(ins).map(Supplier::get).toArray(EffectInstance[]::new));
 	}
 
 	@Override
@@ -166,8 +165,12 @@ public enum PolarisArmorMaterial implements IArmorMaterial {
 		return this.kbRes;
 	}
 
-	private static EffectInstance get(Effect eff, int lv) {
-		return new EffectInstance(eff, 40, lv, true, false, true);
+	private static Supplier<EffectInstance> get(Supplier<Effect> eff, int lv) {
+		return () -> new EffectInstance(eff.get(), 40, lv, true, false, true);
+	}
+
+	private static Supplier<EffectInstance> get(Effect eff, int lv) {
+		return () -> new EffectInstance(eff, 40, lv, true, false, true);
 	}
 
 }

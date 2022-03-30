@@ -76,7 +76,7 @@ public class RecipeGen {
 			new AlloySmithingRecipeBuilder(PolarisItems.SimpleItem.THE_SOIL_OF_EVERYTHING.entry.get(), 1)
 					.unlockedBy(pvd, Blocks.GRASS_BLOCK).pattern(" A ").pattern("ABA").pattern("CDE")
 					.define('A', Items.BONE_MEAL).define('B', Blocks.GRASS_BLOCK)
-					.define('C', Blocks.MYCELIUM).define('D', Blocks.SAND)
+					.define('C', Blocks.MYCELIUM).define('D', Blocks.INFESTED_STONE)
 					.define('E', Blocks.PODZOL).save(pvd);
 			new AlloySmithingRecipeBuilder(PolarisItems.SimpleItem.FLAME_OF_THE_SOUL.entry.get(), 1)
 					.unlockedBy(pvd, Items.BLAZE_POWDER).pattern(" A ").pattern("BCD").pattern("EFE")
@@ -84,10 +84,10 @@ public class RecipeGen {
 					.define('C', Blocks.SOUL_SAND).define('D', Items.NETHER_WART)
 					.define('E', Items.LAVA_BUCKET).define('F', Items.BLAZE_POWDER).save(pvd);
 			new AlloySmithingRecipeBuilder(PolarisItems.SimpleItem.PURGATORY_SOIL.entry.get(), 1)
-					.unlockedBy(pvd, Items.BLAZE_POWDER).pattern(" A ").pattern(" B ").pattern("CDE")
-					.define('A', Items.GHAST_TEAR).define('B', Items.BLAZE_POWDER)
-					.define('C', Blocks.SOUL_SAND).define('D', Blocks.MAGMA_BLOCK)
-					.define('E', Blocks.SOUL_SOIL).save(pvd);
+					.unlockedBy(pvd, Items.BLAZE_POWDER).pattern(" B ").pattern("BDB").pattern("FEG")
+					.define('B', Items.BLAZE_POWDER).define('E', Blocks.SOUL_SOIL)
+					.define('D', Blocks.MAGMA_BLOCK).define('F', Blocks.CRIMSON_NYLIUM)
+					.define('G', Blocks.WARPED_NYLIUM).save(pvd);
 			new AlloySmithingRecipeBuilder(PolarisItems.SimpleItem.LIFE_OF_SEEDS.entry.get(), 1)
 					.unlockedBy(pvd, Items.WHEAT_SEEDS).pattern("A B").pattern(" C ").pattern("D E")
 					.define('A', Items.COCOA_BEANS).define('B', Items.BEETROOT_SEEDS)
@@ -102,7 +102,7 @@ public class RecipeGen {
 			new AlloySmithingRecipeBuilder(PolarisItems.SimpleItem.SPIRIT_OF_DIVINITY.entry.get(), 1)
 					.unlockedBy(pvd, PolarisItems.SimpleItem.NETHER_STAR_ESSENCE.entry.get())
 					.pattern("CBC").pattern("BAB").pattern("DBD")
-					.define('A', PolarisItems.SimpleItem.LIFE_OF_SEEDS.entry.get())
+					.define('A', Items.TOTEM_OF_UNDYING)
 					.define('B', PolarisItems.SimpleItem.NETHER_STAR_ESSENCE.entry.get())
 					.define('C', PolarisItems.SimpleItem.FLAME_OF_THE_SOUL.entry.get())
 					.define('D', PolarisItems.SimpleItem.CRYING_GHOST.entry.get())
@@ -114,6 +114,13 @@ public class RecipeGen {
 					.define('E', Items.ENDER_PEARL).define('F', Items.BLAZE_ROD)
 					.define('G', Items.ROTTEN_FLESH).define('H', Items.SLIME_BALL)
 					.define('I', Items.SPIDER_EYE).save(pvd);
+			new AlloySmithingRecipeBuilder(PolarisItems.SimpleItem.KNOWLEDGE.entry.get(), 1)
+					.unlockedBy(pvd, Blocks.GILDED_BLACKSTONE).pattern("ABC").pattern("DEF").pattern("GHI")
+					.define('A', Items.INFESTED_STONE).define('B', Items.TRIDENT)
+					.define('C', Items.GILDED_BLACKSTONE).define('D', Items.DRAGON_HEAD)
+					.define('F', Items.CREEPER_HEAD).define('G', Items.SPONGE)
+					.define('H', Items.TURTLE_EGG).define('I', Items.RESPAWN_ANCHOR)
+					.define('E', PolarisItems.SimpleItem.SPIRIT_OF_DIVINITY.entry.get()).save(pvd);
 
 		}
 		// furnace
@@ -149,32 +156,32 @@ public class RecipeGen {
 
 				new AlloySmithingRecipeBuilder(PolarisItems.ARMORS[PolarisArmorMaterial.MS_BLUE_DRAGON.ordinal()][i].get(), 1)
 						.unlockedBy(pvd, PolarisItems.ARMORS[PolarisArmorMaterial.MS_BASE.ordinal()][i].get())
-						.pattern("ABA").pattern("ACA").pattern("EDE").define('B', Items.EMERALD)
+						.pattern("ABA").pattern("ACA").pattern("EDE").define('B', Items.CONDUIT)
 						.define('A', PolarisItems.SimpleItem.REFINED_NETHERITE_INGOT.entry.get())
 						.define('C', PolarisItems.SimpleItem.RUNE_CORE_1_ACTIVATED.entry.get())
 						.define('E', PolarisItems.SimpleItem.CRYING_GHOST.entry.get())
 						.define('D', PolarisItems.ARMORS[PolarisArmorMaterial.MS_BASE.ordinal()][i].get()).save(pvd);
 				new AlloySmithingRecipeBuilder(PolarisItems.ARMORS[PolarisArmorMaterial.MS_WHITE_TIGER.ordinal()][i].get(), 1)
 						.unlockedBy(pvd, PolarisItems.ARMORS[PolarisArmorMaterial.MS_BASE.ordinal()][i].get())
-						.pattern("ABA").pattern("ACA").pattern("EDE").define('B', Items.QUARTZ)
+						.pattern("ABA").pattern("ACA").pattern("EDE").define('B', Items.RABBIT_FOOT)
 						.define('A', PolarisItems.SimpleItem.REFINED_NETHERITE_INGOT.entry.get())
 						.define('C', PolarisItems.SimpleItem.RUNE_CORE_1_ACTIVATED.entry.get())
 						.define('E', PolarisItems.SimpleItem.DEMON_SOUL.entry.get())
 						.define('D', PolarisItems.ARMORS[PolarisArmorMaterial.MS_BASE.ordinal()][i].get()).save(pvd);
 				new AlloySmithingRecipeBuilder(PolarisItems.ARMORS[PolarisArmorMaterial.MS_VERMILION_BIRD.ordinal()][i].get(), 1)
 						.unlockedBy(pvd, PolarisItems.ARMORS[PolarisArmorMaterial.MS_BASE.ordinal()][i].get())
-						.pattern("EBE").pattern("FCF").pattern("ADA")
-						.define('B', Items.BLAZE_POWDER).define('F', Items.FEATHER)
+						.pattern("EBE").pattern("FCF").pattern("ADA").define('B', Items.ELYTRA)
+						.define('F', PolarisItems.SimpleItem.FLAME_OF_THE_SOUL.entry.get())
 						.define('A', PolarisItems.SimpleItem.REFINED_NETHERITE_INGOT.entry.get())
 						.define('C', PolarisItems.SimpleItem.RUNE_CORE_1_ACTIVATED.entry.get())
 						.define('E', PolarisItems.SimpleItem.PURGATORY_SOIL.entry.get())
 						.define('D', PolarisItems.ARMORS[PolarisArmorMaterial.MS_BASE.ordinal()][i].get()).save(pvd);
 				new AlloySmithingRecipeBuilder(PolarisItems.ARMORS[PolarisArmorMaterial.MS_BLACK_TORTOISE.ordinal()][i].get(), 1)
 						.unlockedBy(pvd, PolarisItems.ARMORS[PolarisArmorMaterial.MS_BASE.ordinal()][i].get())
-						.pattern("AAA").pattern("ACA").pattern("EDE")
+						.pattern("ABA").pattern("ACA").pattern("EDE").define('B', Items.TURTLE_HELMET)
 						.define('A', PolarisItems.SimpleItem.REFINED_NETHERITE_INGOT.entry.get())
 						.define('C', PolarisItems.SimpleItem.RUNE_CORE_1_ACTIVATED.entry.get())
-						.define('E', PolarisItems.SimpleItem.PURGATORY_SOIL.entry.get())
+						.define('E', PolarisItems.SimpleItem.THE_SOIL_OF_EVERYTHING.entry.get())
 						.define('D', PolarisItems.ARMORS[PolarisArmorMaterial.MS_BASE.ordinal()][i].get()).save(pvd);
 				new AlloySmithingRecipeBuilder(PolarisItems.ARMORS[PolarisArmorMaterial.STARDUST.ordinal()][i].get(), 1)
 						.unlockedBy(pvd, PolarisItems.SimpleItem.RUNE_CORE_2_ACTIVATED.entry.get())
@@ -210,6 +217,14 @@ public class RecipeGen {
 						.define('3', PolarisItems.ARMORS[PolarisArmorMaterial.MS_VERMILION_BIRD.ordinal()][i].get())
 						.define('4', PolarisItems.ARMORS[PolarisArmorMaterial.MS_BLACK_TORTOISE.ordinal()][i].get())
 						.define('5', PolarisItems.ARMORS[PolarisArmorMaterial.STAR_LORD.ordinal()][i].get())
+						.save(pvd);
+				new AlloySmithingRecipeBuilder(PolarisItems.ARMORS[PolarisArmorMaterial.SUPREME_GENESIS_WHITE.ordinal()][i].get(), 1)
+						.unlockedBy(pvd, PolarisItems.SimpleItem.KNOWLEDGE.entry.get())
+						.pattern("BCB").pattern("A1A").pattern("BCB")
+						.define('A', PolarisItems.SimpleItem.SPIRIT_OF_DIVINITY.entry.get())
+						.define('B', PolarisItems.SimpleItem.KNOWLEDGE.entry.get())
+						.define('C', PolarisItems.SimpleItem.POWER_RUNE_CORE_ACTIVATED.entry.get())
+						.define('1', PolarisItems.ARMORS[PolarisArmorMaterial.SUPREME_GENESIS.ordinal()][i].get())
 						.save(pvd);
 			}
 		}

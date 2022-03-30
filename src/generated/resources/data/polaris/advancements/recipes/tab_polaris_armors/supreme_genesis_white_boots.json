@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "polaris:supreme_genesis_white_boots"
+    ]
+  },
+  "criteria": {
+    "has_knowledge": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "polaris:knowledge"
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "polaris:supreme_genesis_white_boots"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_knowledge",
+      "has_the_recipe"
+    ]
+  ]
+}

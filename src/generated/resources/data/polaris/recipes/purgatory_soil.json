@@ -1,25 +1,25 @@
 {
   "type": "polaris:alloy_smithing",
   "pattern": [
-    " A ",
     " B ",
-    "CDE"
+    "BDB",
+    "FEG"
   ],
   "key": {
-    "A": {
-      "item": "minecraft:ghast_tear"
-    },
     "B": {
       "item": "minecraft:blaze_powder"
     },
-    "C": {
-      "item": "minecraft:soul_sand"
+    "E": {
+      "item": "minecraft:soul_soil"
     },
     "D": {
       "item": "minecraft:magma_block"
     },
-    "E": {
-      "item": "minecraft:soul_soil"
+    "F": {
+      "item": "minecraft:crimson_nylium"
+    },
+    "G": {
+      "item": "minecraft:warped_nylium"
     }
   },
   "result": {

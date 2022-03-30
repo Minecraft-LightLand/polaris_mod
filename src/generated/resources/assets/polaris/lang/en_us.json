@@ -16,6 +16,7 @@
   "item.polaris.end_essence": "End Essence",
   "item.polaris.flame_of_the_soul": "Flame Of The Soul",
   "item.polaris.heart_of_ore": "Heart Of Ore",
+  "item.polaris.knowledge": "Knowledge",
   "item.polaris.life_of_seeds": "Life Of Seeds",
   "item.polaris.little_cat_blue_boots": "Little Cat Blue Boots",
   "item.polaris.little_cat_blue_chestplate": "Little Cat Blue Chestplate",
@@ -98,5 +99,8 @@
   "polaris.advancement.starlord.text": "Equip full star load armor",
   "polaris.advancement.starlord.title": "I'm the star load",
   "polaris.advancement.supreme.text": "Equip full supreme genesis armor",
-  "polaris.advancement.supreme.title": "I'm the god"
+  "polaris.advancement.supreme.title": "I'm the god",
+  "polaris.tooltip.armor.extra": "When equip full set:",
+  "polaris.tooltip.armor.fly": "Enable creative fly",
+  "polaris.tooltip.armor.home": "Return home when dropped in the void"
 }
