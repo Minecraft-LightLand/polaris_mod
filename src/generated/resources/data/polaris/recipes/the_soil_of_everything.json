@@ -1,13 +1,19 @@
 {
   "type": "polaris:alloy_smithing",
   "pattern": [
-    " A ",
-    "ABA",
+    " 2 ",
+    "1B3",
     "CDE"
   ],
   "key": {
-    "A": {
-      "item": "minecraft:bone_meal"
+    "1": {
+      "item": "minecraft:lilac"
+    },
+    "2": {
+      "item": "minecraft:rose_bush"
+    },
+    "3": {
+      "item": "minecraft:blue_orchid"
     },
     "B": {
       "item": "minecraft:grass_block"

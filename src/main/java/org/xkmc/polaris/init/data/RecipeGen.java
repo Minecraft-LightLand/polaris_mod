@@ -89,8 +89,8 @@ public class RecipeGen {
 					.save(pvd);
 			new AlloySmithingRecipeBuilder(PolarisItems.SimpleItem.THE_SOIL_OF_EVERYTHING.entry.get(), 1)
 					.unlockedBy(pvd, Blocks.GRASS_BLOCK).pattern(" 2 ").pattern("1B3").pattern("CDE")
-					.define('A', Items.LILAC).define('A', Items.ROSE_BUSH)
-					.define('A', Items.BLUE_ORCHID).define('B', Blocks.GRASS_BLOCK)
+					.define('1', Items.LILAC).define('2', Items.ROSE_BUSH)
+					.define('3', Items.BLUE_ORCHID).define('B', Blocks.GRASS_BLOCK)
 					.define('C', Blocks.MYCELIUM).define('D', Blocks.INFESTED_STONE)
 					.define('E', Blocks.PODZOL).save(pvd);
 			new AlloySmithingRecipeBuilder(PolarisItems.SimpleItem.PURGATORY_SOIL.entry.get(), 1)
