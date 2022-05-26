@@ -3,7 +3,7 @@
   "priority": 1000,
   "package": "org.xkmc.polaris.mixin",
   "compatibilityLevel": "JAVA_8",
-  "refmap": "lightland.refmap.json",
+  "refmap": "polaris.refmap.json",
   "mixins": [
 	"PlayerEntityMixin"
   ],
